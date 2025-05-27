@@ -11,10 +11,70 @@ I’m a 3rd-year Ph.D. student in the Edge Intelligence Group at Tianjin Univers
 
 Before my Ph.D., I received my B.E. and M.E. degrees from Tianjin University, both from the College of Intelligence and Computing. I have also completed two industrial internships at PPIO (Paiou Cloud), where I developed large-scale workload prediction models and integrated intelligent task deployment systems.
 
-I’m passionate about building intelligent, resource-efficient cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I’ve been working on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
+I’m passionate about building intelligent, high-performance (high-throughput and SLO-compliant) cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I’ve been working on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
 
 <!-- 🆕 I am currently on the job market, seeking research and engineering opportunities in academia and industry. Please feel free to reach out for collaboration or discussion. -->
 
+<div style="display: flex; flex-wrap: wrap; margin-top: 2em;">
+  <!-- 左侧 Interests 部分 -->
+  <div style="flex: 1; min-width: 300px; padding-right: 20px;">
+    <h1>Interests</h1>
+    <ul>
+      <li>Resource-efficient AI Systems</li>
+      <li>Applications with Mobile AI</li>
+      <li>Edge Foundation AI Model</li>
+      <li>Parallel and Distributed MLSys</li>
+    </ul>
+  </div>
+  
+  <!-- 右侧 Education 部分 -->
+  <div style="flex: 1; min-width: 300px;">
+    <h1>Education</h1>
+    
+    <!-- 伦敦国王学院访问博士 -->
+    <div style="display: flex; margin-bottom: 20px; align-items: center;">
+      <div style="width: 60px; margin-right: 15px;">
+        <img src="/images/logos/cuhk-logo.png" alt="CUHK Logo" style="width: 100%;">
+      </div>
+      <div>
+        <p style="margin: 0; font-weight: bold;">Visiting Ph.D. in Engineering, 2024.10 - 2025.10</p>
+        <p style="margin: 0;">King's College London (UK) | Advisor: Prof. <a href="https://www.yanshadeng.org/">Yansha Deng</a></p>
+      </div>
+    </div>
+    
+    <!-- 天津大学博士 -->
+    <div style="display: flex; margin-bottom: 20px; align-items: center;">
+      <div style="width: 60px; margin-right: 15px;">
+        <img src="/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
+      </div>
+      <div>
+        <p style="margin: 0; font-weight: bold;">Ph.D. in Computer Science, 2022 - Present</p>
+        <p style="margin: 0;">Tianjin University | Advisor: Prof. <a href="http://www.drxiaofei.wang/index.html">Xiaofei Wang</a></p>
+      </div>
+    </div>
+    
+    <!-- 天津大学硕士 -->
+    <div style="display: flex; margin-bottom: 20px; align-items: center;">
+      <div style="width: 60px; margin-right: 15px;">
+        <img src="/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
+      </div>
+      <div>
+        <p style="margin: 0; font-weight: bold;">M.S. in Computer Science, 2016 – 2020</p>
+        <p style="margin: 0;">Tianjin University | Advisor: Prof. <a href="http://www.drxiaofei.wang/index.html">Xiaofei Wang</a></p>
+      </div>
+    </div>
+
+    <!-- 天津大学本科 -->
+    <div style="display: flex; margin-bottom: 20px; align-items: center;">
+      <div style="width: 60px; margin-right: 15px;">
+        <img src="/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
+      </div>
+      <div>
+        <p style="margin: 0; font-weight: bold;">B.E. in Computer Science, 2016 – 2020</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- A data-driven personal website
 ======
