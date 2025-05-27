@@ -34,7 +34,7 @@ I’m passionate about building intelligent, high-performance (high-throughput a
     <!-- 伦敦国王学院访问博士 -->
     <div style="display: flex; margin-bottom: 20px; align-items: center;">
       <div style="width: 60px; margin-right: 15px;">
-        <img src="/images/logos/cuhk-logo.png" alt="CUHK Logo" style="width: 100%;">
+        <img src="/images/logos/kcl-logo.svg" alt="CUHK Logo" style="width: 100%;">
       </div>
       <div>
         <p style="margin: 0; font-weight: bold;">Visiting Ph.D. in Engineering, 2024.10 - 2025.10</p>
