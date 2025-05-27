@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I’m a 3rd-year Ph.D. student in the Edge Intelligence at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). My research lies at the intersection of distributed systems and edge-cloud intelligence, with a particular focus on system workload prediction, resource orchestration, and machine learning–enhanced configuration optimization. I'm fortunate to also be a visiting Ph.D. student at the Department of Engineering, King’s College London, where I collaborate under the supervision of Professor Yansha Deng.
+I’m a 3rd-year Ph.D. student in the Edge Intelligence at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). My research lies at the intersection of distributed systems and edge-cloud intelligence, with a particular focus on system workload prediction, resource orchestration, and machine learning–enhanced configuration optimization. I'm fortunate to also be a visiting Ph.D. student at the Department of Engineering, King’s College London, where I collaborate under the supervision of Professor [Yansha Deng](https://www.yanshadeng.org/).
 
 Before my Ph.D., I received my B.E. and M.E. degrees from Tianjin University, both from the College of Intelligence and Computing. I have also completed two industrial internships at PPIO (Paiou Cloud), where I developed large-scale workload prediction models and integrated intelligent task deployment systems.
 
-I’m passionate about building intelligent, resource-efficient cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I’ve been working on LLM-adaptive workload forecasting frameworks and unified optimization for inference and fine-tuning tasks across distributed platforms.
+I’m passionate about building intelligent, resource-efficient cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I’ve been working on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
 
 <!-- 🆕 I am currently on the job market, seeking research and engineering opportunities in academia and industry. Please feel free to reach out for collaboration or discussion. -->
 
