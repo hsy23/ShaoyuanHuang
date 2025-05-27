@@ -34,7 +34,7 @@ I’m passionate about building intelligent, high-performance (high-throughput a
     <!-- 伦敦国王学院访问博士 -->
     <div style="display: flex; margin-bottom: 20px; align-items: center;">
       <div style="width: 60px; margin-right: 15px;">
-        <img src="/images/logos/kcl-logo.svg" alt="CUHK Logo" style="width: 100%;">
+        <img src="{{ site.baseurl }}/images/logos/kcl-logo.svg" alt="CUHK Logo" style="width: 100%;">
       </div>
       <div>
         <p style="margin: 0; font-weight: bold;">Visiting Ph.D. in Engineering, 2024.10 - 2025.10</p>
@@ -45,7 +45,7 @@ I’m passionate about building intelligent, high-performance (high-throughput a
     <!-- 天津大学博士 -->
     <div style="display: flex; margin-bottom: 20px; align-items: center;">
       <div style="width: 60px; margin-right: 15px;">
-        <img src="/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
+        <img src="{{ site.baseurl }}/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
       </div>
       <div>
         <p style="margin: 0; font-weight: bold;">Ph.D. in Computer Science, 2022 - Present</p>
@@ -56,7 +56,7 @@ I’m passionate about building intelligent, high-performance (high-throughput a
     <!-- 天津大学硕士 -->
     <div style="display: flex; margin-bottom: 20px; align-items: center;">
       <div style="width: 60px; margin-right: 15px;">
-        <img src="/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
+        <img src="{{ site.baseurl }}/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
       </div>
       <div>
         <p style="margin: 0; font-weight: bold;">M.S. in Computer Science, 2021 – 2022</p>
@@ -67,7 +67,7 @@ I’m passionate about building intelligent, high-performance (high-throughput a
     <!-- 天津大学本科 -->
     <div style="display: flex; margin-bottom: 20px; align-items: center;">
       <div style="width: 60px; margin-right: 15px;">
-        <img src="/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
+        <img src="{{ site.baseurl }}/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
       </div>
       <div>
         <p style="margin: 0; font-weight: bold;">B.E. in Computer Science, 2016 – 2020</p>
