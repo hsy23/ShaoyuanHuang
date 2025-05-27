@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-UK"
 site_theme               : "default"
-title                    : "Shaoyuan Huang"
+title                    : "Shaoyuan Huang （黄少远）"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "Ph.D. Candidate @ Tianjin University, Visiting Researcher @ King’s College London"
