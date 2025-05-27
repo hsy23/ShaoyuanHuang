@@ -86,7 +86,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
         <span style="font-size: 24px; margin-right: 10px;">🎓</span>
         <h3 style="margin: 0; color: white;">CCF DPCS Distinguished Doctorate</h3>
       </div>
-      <p style="margin: 0; opacity: 0.9;">2024</p>
+      <p style="margin: 0; opacity: 0.9;">CCF Computility 2024</p>
     </div>
 
     <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -94,7 +94,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
         <span style="font-size: 24px; margin-right: 10px;">💰</span>
         <h3 style="margin: 0; color: white;">Suzhou Talent Scholarship</h3>
       </div>
-      <p style="margin: 0; opacity: 0.9;">Tianjin University, 2023 & 2021</p>
+      <p style="margin: 0; opacity: 0.9;">Suzhou Government Talent Group, 2023 & 2021</p>
     </div>
 
     <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -118,7 +118,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
 
 <!-- Experience Section -->
 <div style="margin-top: 3em;">
-  <h1>💼 Experience</h1>
+  <h1>💼 Internship</h1>
   
   <div style="margin-top: 1.5em;">
     <!-- PPIO 实习经历 1 -->
