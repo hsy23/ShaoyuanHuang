@@ -20,7 +20,8 @@ author_profile: true
 {% assign other_author_journals = "" | split: "" %}
 
 {% for post in journal_papers %}
-  {% if post.citation contains "<b>Shaoyuan Huang</b>" and post.citation contains "<b>Shaoyuan Huang</b>," %}
+  {% assign citation_start = post.citation | slice: 0, 21 %}
+  {% if citation_start == "<b>Shaoyuan Huang</b>" %}
     {% assign first_author_journals = first_author_journals | push: post %}
   {% else %}
     {% assign other_author_journals = other_author_journals | push: post %}
@@ -32,7 +33,8 @@ author_profile: true
 {% assign other_author_conferences = "" | split: "" %}
 
 {% for post in conference_papers %}
-  {% if post.citation contains "<b>Shaoyuan Huang</b>" and post.citation contains "<b>Shaoyuan Huang</b>," %}
+  {% assign citation_start = post.citation | slice: 0, 21 %}
+  {% if citation_start == "<b>Shaoyuan Huang</b>" %}
     {% assign first_author_conferences = first_author_conferences | push: post %}
   {% else %}
     {% assign other_author_conferences = other_author_conferences | push: post %}
