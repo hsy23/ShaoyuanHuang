@@ -11,20 +11,64 @@ author_profile: true
 
 {% include base_path %}
 
+<!-- 创建排序后的论文数组 -->
+{% assign journal_papers = site.publications | where: "category", "journals" %}
+{% assign conference_papers = site.publications | where: "category", "conferences" %}
+
+<!-- 分离第一作者和非第一作者的期刊论文 -->
+{% assign first_author_journals = "" | split: "" %}
+{% assign other_author_journals = "" | split: "" %}
+
+{% for post in journal_papers %}
+  {% if post.citation contains "<b>Shaoyuan Huang</b>" and post.citation contains "<b>Shaoyuan Huang</b>," %}
+    {% assign first_author_journals = first_author_journals | push: post %}
+  {% else %}
+    {% assign other_author_journals = other_author_journals | push: post %}
+  {% endif %}
+{% endfor %}
+
+<!-- 分离第一作者和非第一作者的会议论文 -->
+{% assign first_author_conferences = "" | split: "" %}
+{% assign other_author_conferences = "" | split: "" %}
+
+{% for post in conference_papers %}
+  {% if post.citation contains "<b>Shaoyuan Huang</b>" and post.citation contains "<b>Shaoyuan Huang</b>," %}
+    {% assign first_author_conferences = first_author_conferences | push: post %}
+  {% else %}
+    {% assign other_author_conferences = other_author_conferences | push: post %}
+  {% endif %}
+{% endfor %}
+
+<!-- 按年份排序 -->
+{% assign first_author_journals_sorted = first_author_journals | sort: "date" | reverse %}
+{% assign other_author_journals_sorted = other_author_journals | sort: "date" | reverse %}
+{% assign first_author_conferences_sorted = first_author_conferences | sort: "date" | reverse %}
+{% assign other_author_conferences_sorted = other_author_conferences | sort: "date" | reverse %}
+
 <h2>Journal Papers</h2>
 <hr/>
-{% for post in site.publications reversed %}
-  {% if post.category == "journals" %}
-    {% include archive-single.html %}
-  {% endif %}
+
+<!-- 显示第一作者期刊论文 -->
+{% for post in first_author_journals_sorted %}
+  {% include archive-single.html %}
+{% endfor %}
+
+<!-- 显示其他作者期刊论文 -->
+{% for post in other_author_journals_sorted %}
+  {% include archive-single.html %}
 {% endfor %}
 
 <h2>Conference Papers</h2>
 <hr/>
-{% for post in site.publications reversed %}
-  {% if post.category == "conferences" %}
-    {% include archive-single.html %}
-  {% endif %}
+
+<!-- 显示第一作者会议论文 -->
+{% for post in first_author_conferences_sorted %}
+  {% include archive-single.html %}
+{% endfor %}
+
+<!-- 显示其他作者会议论文 -->
+{% for post in other_author_conferences_sorted %}
+  {% include archive-single.html %}
 {% endfor %}
 
 
