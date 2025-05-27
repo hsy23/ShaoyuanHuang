@@ -167,6 +167,21 @@ I'm passionate about building intelligent, high-performance (high-throughput and
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-top: 1.5em;">
     
+    <!-- MetaEformer -->
+    <div style="border: 1px solid #e1e5e9; border-radius: 12px; padding: 25px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.2s;">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <span style="font-size: 28px; margin-right: 12px;">🧠</span>
+        <h3 style="margin: 0; color: #333;">MetaEformer</h3>
+      </div>
+      <p style="color: #666; margin-bottom: 15px; line-height: 1.5;">
+        Official release (v1.0) of MetaEformer, a framework for load forecasting in complex and dynamic systems, accepted at KDD 2025.
+      </p>
+      <a href="https://zenodo.org/records/15502862" target="_blank" style="display: inline-flex; align-items: center; background: #24292e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">
+        <span style="margin-right: 8px;">📁</span>
+        View on Zenodo
+      </a>
+    </div>
+
     <!-- Edge Cloud Server Latency Measurements -->
     <div style="border: 1px solid #e1e5e9; border-radius: 12px; padding: 25px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.2s;">
       <div style="display: flex; align-items: center; margin-bottom: 15px;">
