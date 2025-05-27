@@ -174,7 +174,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
         <h3 style="margin: 0; color: #333;">MetaEformer</h3>
       </div>
       <p style="color: #666; margin-bottom: 15px; line-height: 1.5;">
-        Official release (v1.0) of MetaEformer, a framework for load forecasting in complex and dynamic systems, accepted at KDD 2025.
+        Official release (v1.0) of MetaEformer, a generic framework for load forecasting in complex and dynamic systems, accepted at KDD 2025.
       </p>
       <a href="https://zenodo.org/records/15502862" target="_blank" style="display: inline-flex; align-items: center; background: #24292e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">
         <span style="margin-right: 8px;">📁</span>
