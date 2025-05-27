@@ -84,9 +84,17 @@ I'm passionate about building intelligent, high-performance (high-throughput and
     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <span style="font-size: 24px; margin-right: 10px;">🎓</span>
-        <h3 style="margin: 0; color: white;">CCF DPCS Distinguished Doctorate</h3>
+        <h3 style="margin: 0; color: white;">China Scholarship Council</h3>
       </div>
-      <p style="margin: 0; opacity: 0.9;">CCF Computility 2024</p>
+      <p style="margin: 0; opacity: 0.9;">2025</p>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 24px; margin-right: 10px;">🏅</span>
+        <h3 style="margin: 0; color: #333;">CCF DPCS Distinguished Doctorate</h3>
+      </div>
+      <p style="margin: 0; opacity: 0.8;">CCF Computility 2024</p>
     </div>
 
     <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
