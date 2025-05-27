@@ -21,7 +21,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
     <h1>Interests</h1>
     <ul>
       <li>Distributed System Workload and Performance Modeling</li>
-      <li>Cloud Resource Provisioning</li>
+      <li>Resource Provisioning</li>
       <li>AI Inference Serving Systems</li>
       <li>Joint LLM Inference and Fine-tuning</li>
     </ul>
