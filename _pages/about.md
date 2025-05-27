@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I’m a 3rd-year Ph.D. student in the Edge Intelligence Group at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). My research lies at the intersection of distributed systems and edge-cloud intelligence, with a particular focus on system workload prediction, resource orchestration, and machine learning–enhanced configuration optimization. I'm also a visiting Ph.D. student at the Department of Engineering, King’s College London (under China Scholarship Council), where I collaborate under the supervision of Professor [Yansha Deng](https://www.yanshadeng.org/).
+I’m a 3rd-year Ph.D. student in the Edge Intelligence Group at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). I'm also a visiting Ph.D. student at the Department of Engineering, King’s College London (under China Scholarship Council), where I collaborate under the supervision of Professor [Yansha Deng](https://www.yanshadeng.org/).
 
-Before my Ph.D., I received my B.E. and M.E. degrees from Tianjin University, both from the College of Intelligence and Computing. I have also completed two industrial internships at PPIO (Paiou Cloud), where I developed large-scale workload prediction models and integrated intelligent task deployment systems.
+Before my Ph.D., I received my B.E. and M.E. degrees from Tianjin University, both from the College of Intelligence and Computing. I have also completed two industrial internships at PPIO [(Paiou Cloud)](https://ppio.cn/), where I developed large-scale workload prediction models and integrated intelligent task deployment systems.
 
 I’m passionate about building intelligent, high-performance (high-throughput and SLO-compliant) cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I’ve been working on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
 
