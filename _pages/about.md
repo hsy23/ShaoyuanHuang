@@ -59,7 +59,7 @@ I’m passionate about building intelligent, high-performance (high-throughput a
         <img src="{{ site.baseurl }}/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
       </div>
       <div>
-        <p style="margin: 0; font-weight: bold;">M.S. in Computer Science, 2021 – 2022</p>
+        <p style="margin: 0; font-weight: bold;">M.S. in Computer Science, 2020 – 2022</p>
         <p style="margin: 0;">Tianjin University | Advisor: Prof. <a href="http://www.drxiaofei.wang/index.html">Xiaofei Wang</a></p>
       </div>
     </div>
