@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I’m a 3rd-year Ph.D. student in the Edge Intelligence Group at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). I'm also a visiting Ph.D. student at the Department of Engineering, King’s College London (under China Scholarship Council), where I collaborate under the supervision of Professor [Yansha Deng](https://www.yanshadeng.org/).
+I'm a 3rd-year Ph.D. student in the Edge Intelligence Group at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). I'm also a visiting Ph.D. student at the Department of Engineering, King's College London (under China Scholarship Council), where I collaborate under the supervision of Professor [Yansha Deng](https://www.yanshadeng.org/).
 
 Before my Ph.D., I received my B.E. and M.E. degrees from Tianjin University, both from the College of Intelligence and Computing. I have also completed two industrial internships at PPIO [(Paiou Cloud)](https://ppio.cn/), where I developed large-scale workload prediction models and integrated intelligent task deployment systems.
 
-I’m passionate about building intelligent, high-performance (high-throughput and SLO-compliant) cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I’ve been working on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
+I'm passionate about building intelligent, high-performance (high-throughput and SLO-compliant) cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I've been working on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
 
 <!-- 🆕 I am currently on the job market, seeking research and engineering opportunities in academia and industry. Please feel free to reach out for collaboration or discussion. -->
 
@@ -73,6 +73,137 @@ I’m passionate about building intelligent, high-performance (high-throughput a
         <p style="margin: 0; font-weight: bold;">B.E. in Computer Science, 2016 – 2020</p>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Awards & Honors Section -->
+<div style="margin-top: 3em;">
+  <h1>🏆 Awards & Honors</h1>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 1em;">
+    
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 24px; margin-right: 10px;">🎓</span>
+        <h3 style="margin: 0; color: white;">CCF DPCS Distinguished Doctorate</h3>
+      </div>
+      <p style="margin: 0; opacity: 0.9;">2024</p>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 24px; margin-right: 10px;">💰</span>
+        <h3 style="margin: 0; color: white;">Suzhou Talent Scholarship</h3>
+      </div>
+      <p style="margin: 0; opacity: 0.9;">Tianjin University, 2023 & 2021</p>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 24px; margin-right: 10px;">⭐</span>
+        <h3 style="margin: 0; color: white;">Merit Student</h3>
+      </div>
+      <p style="margin: 0; opacity: 0.9;">Tianjin University, 2023, 2021, 2019, 2018, 2017</p>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 24px; margin-right: 10px;">🌟</span>
+        <h3 style="margin: 0; color: white;">Outstanding Graduate</h3>
+      </div>
+      <p style="margin: 0; opacity: 0.9;">Tianjin University, 2020</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Experience Section -->
+<div style="margin-top: 3em;">
+  <h1>💼 Experience</h1>
+  
+  <div style="margin-top: 1.5em;">
+    <!-- PPIO 实习经历 1 -->
+    <div style="border-left: 4px solid #667eea; padding-left: 20px; margin-bottom: 30px; background: #f8f9ff; padding: 20px; border-radius: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+        <div>
+          <h3 style="margin: 0; color: #333;">Algorithm Development Intern</h3>
+          <p style="margin: 5px 0; color: #666; font-weight: bold;">PPIO Cloud Computing (Shanghai) Co.</p>
+        </div>
+        <span style="background: #667eea; color: white; padding: 5px 12px; border-radius: 15px; font-size: 14px;">2021.09 - 2022.01</span>
+      </div>
+      <ul style="margin: 10px 0; color: #555;">
+        <li>Responsible for the development of cloud server workload analysis and prediction algorithms</li>
+        <li>Server utilization impact feature mining and optimization</li>
+      </ul>
+    </div>
+
+    <!-- PPIO 实习经历 2 -->
+    <div style="border-left: 4px solid #4facfe; padding-left: 20px; margin-bottom: 30px; background: #f0fbff; padding: 20px; border-radius: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+        <div>
+          <h3 style="margin: 0; color: #333;">Algorithm Development Intern</h3>
+          <p style="margin: 5px 0; color: #666; font-weight: bold;">Paiou Cloud Computing (Shanghai) Co.</p>
+        </div>
+        <span style="background: #4facfe; color: white; padding: 5px 12px; border-radius: 15px; font-size: 14px;">2022.03 - 2022.06</span>
+      </div>
+      <ul style="margin: 10px 0; color: #555;">
+        <li>Responsible for system integration of prediction algorithms</li>
+        <li>Task deployment recommender system development and optimization</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Open Source Projects Section -->
+<div style="margin-top: 3em;">
+  <h1>🚀 Open Source Projects</h1>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-top: 1.5em;">
+    
+    <!-- Edge Cloud Server Latency Measurements -->
+    <div style="border: 1px solid #e1e5e9; border-radius: 12px; padding: 25px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.2s;">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <span style="font-size: 28px; margin-right: 12px;">📊</span>
+        <h3 style="margin: 0; color: #333;">Edge Cloud Server Latency Measurements</h3>
+      </div>
+      <p style="color: #666; margin-bottom: 15px; line-height: 1.5;">
+        Large-scale edge cloud latency measurement dataset and analysis tools for performance optimization research.
+      </p>
+      <a href="https://github.com/henrycoding/IWQoS23EdgeMeasurements" target="_blank" style="display: inline-flex; align-items: center; background: #24292e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">
+        <span style="margin-right: 8px;">📁</span>
+        View on GitHub
+      </a>
+    </div>
+
+    <!-- DynEformer -->
+    <div style="border: 1px solid #e1e5e9; border-radius: 12px; padding: 25px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.2s;">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <span style="font-size: 28px; margin-right: 12px;">🤖</span>
+        <h3 style="margin: 0; color: #333;">DynEformer</h3>
+      </div>
+      <p style="color: #666; margin-bottom: 15px; line-height: 1.5;">
+        Edge Cloud Server Workload Prediction Framework using advanced transformer architectures for dynamic environments.
+      </p>
+      <a href="https://github.com/hsy23/KDD23_DynEformer" target="_blank" style="display: inline-flex; align-items: center; background: #24292e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">
+        <span style="margin-right: 8px;">📁</span>
+        View on GitHub
+      </a>
+    </div>
+
+    <!-- ECW Dataset -->
+    <div style="border: 1px solid #e1e5e9; border-radius: 12px; padding: 25px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.2s;">
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <span style="font-size: 28px; margin-right: 12px;">💾</span>
+        <h3 style="margin: 0; color: #333;">ECW Dataset</h3>
+      </div>
+      <p style="color: #666; margin-bottom: 15px; line-height: 1.5;">
+        Comprehensive Edge Cloud Server Workload Dataset for machine learning research and system optimization.
+      </p>
+      <a href="https://github.com/hsy23/ECWDataset" target="_blank" style="display: inline-flex; align-items: center; background: #24292e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">
+        <span style="margin-right: 8px;">📁</span>
+        View on GitHub
+      </a>
+    </div>
+
   </div>
 </div>
 
