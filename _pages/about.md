@@ -20,10 +20,10 @@ I’m passionate about building intelligent, high-performance (high-throughput a
   <div style="flex: 1; min-width: 300px; padding-right: 20px;">
     <h1>Interests</h1>
     <ul>
-      <li>Resource-efficient AI Systems</li>
-      <li>Applications with Mobile AI</li>
-      <li>Edge Foundation AI Model</li>
-      <li>Parallel and Distributed MLSys</li>
+      <li>Distributed System Workload and Performance Modeling</li>
+      <li>Cloud Resource Provisioning</li>
+      <li>AI Inference Serving Systems</li>
+      <li>Joint LLM Inference and Fine-tuning</li>
     </ul>
   </div>
   
@@ -59,7 +59,7 @@ I’m passionate about building intelligent, high-performance (high-throughput a
         <img src="/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
       </div>
       <div>
-        <p style="margin: 0; font-weight: bold;">M.S. in Computer Science, 2016 – 2020</p>
+        <p style="margin: 0; font-weight: bold;">M.S. in Computer Science, 2021 – 2022</p>
         <p style="margin: 0;">Tianjin University | Advisor: Prof. <a href="http://www.drxiaofei.wang/index.html">Xiaofei Wang</a></p>
       </div>
     </div>
