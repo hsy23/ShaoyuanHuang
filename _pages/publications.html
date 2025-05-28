@@ -6,25 +6,60 @@ author_profile: true
 ---
 
 <style>
+  /* 统一页面布局 */
+  .page__content {
+    padding-right: 0; /* 移除默认右内边距 */
+  }
+  
+  /* 页面标题 */
+  .page__title {
+    padding-left: 65px; /* 使页面标题与内容对齐 */
+  }
+  
+  /* 整体内容右移 */
   .archive {
     padding-left: 30px; /* 向右移动整个内容 */
   }
-  .publications-content {
-    padding-left: 20px; /* 额外向右移动内容 */
-  }
-  .publications-content h2 {
-    padding-left: 15px; /* 标题与论文列表对齐 */
-  }
-  .publications-content hr {
-    margin-left: 15px; /* 分隔线与标题对齐 */
-    width: calc(100% - 15px); /* 调整分隔线宽度 */
-  }
-  .list__item {
-    padding-left: 15px; /* 单个论文条目向右移动 */
-  }
+  
+  /* Google Scholar 信息 */
   .wordwrap {
-    padding-left: 35px; /* Google Scholar信息向右移动 */
-    margin-bottom: 20px; /* 增加底部间距 */
+    padding-left: 65px; /* 与论文标题对齐 */
+    margin-bottom: 30px; /* 增加底部间距 */
+  }
+  
+  /* 论文内容区域 */
+  .publications-content {
+    padding-left: 0; /* 重置内边距 */
+    margin-left: 0; /* 重置左边距 */
+  }
+  
+  /* 论文分类标题 */
+  .publications-content h2 {
+    padding-left: 65px; /* 与论文内容对齐 */
+    margin-bottom: 10px; /* 减少与分隔线的间距 */
+  }
+  
+  /* 分隔线 */
+  .publications-content hr {
+    margin-left: 65px; /* 与标题对齐 */
+    width: calc(100% - 65px); /* 调整分隔线宽度 */
+    margin-bottom: 25px; /* 增加与内容的间距 */
+  }
+  
+  /* 单个论文条目 */
+  .list__item {
+    padding-left: 65px; /* 统一左内边距 */
+    margin-bottom: 35px; /* 增加论文条目间的间距 */
+  }
+  
+  /* 论文标题 */
+  .archive__item-title {
+    margin-top: 0; /* 移除标题顶部间距 */
+  }
+  
+  /* 论文相关链接 */
+  .archive__item a {
+    text-decoration: none; /* 移除链接下划线 */
   }
 </style>
 
