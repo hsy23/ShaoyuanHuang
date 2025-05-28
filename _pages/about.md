@@ -116,7 +116,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
     <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <span style="font-size: 24px; margin-right: 10px;">🌟</span>
-        <h3 style="margin: 0; color: white;">Outstanding Graduate Student/h3>
+        <h3 style="margin: 0; color: white;">Outstanding Graduate</h3>
       </div>
       <p style="margin: 0; opacity: 0.9;">Tianjin University, 2020</p>
     </div>
