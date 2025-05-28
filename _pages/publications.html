@@ -5,6 +5,18 @@ permalink: /publications/
 author_profile: true
 ---
 
+<style>
+  .archive {
+    padding-left: 30px; /* 向右移动整个内容 */
+  }
+  .publications-content {
+    padding-left: 20px; /* 额外向右移动内容 */
+  }
+  .list__item {
+    padding-left: 15px; /* 单个论文条目向右移动 */
+  }
+</style>
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
@@ -47,31 +59,33 @@ author_profile: true
 {% assign first_author_conferences_sorted = first_author_conferences | sort: "date" | reverse %}
 {% assign other_author_conferences_sorted = other_author_conferences | sort: "date" | reverse %}
 
-<h2>Journal Papers</h2>
-<hr/>
+<div class="publications-content">
+  <h2>Journal Papers</h2>
+  <hr/>
 
-<!-- 显示第一作者期刊论文 -->
-{% for post in first_author_journals_sorted %}
-  {% include archive-single.html %}
-{% endfor %}
+  <!-- 显示第一作者期刊论文 -->
+  {% for post in first_author_journals_sorted %}
+    {% include archive-single.html %}
+  {% endfor %}
 
-<!-- 显示其他作者期刊论文 -->
-{% for post in other_author_journals_sorted %}
-  {% include archive-single.html %}
-{% endfor %}
+  <!-- 显示其他作者期刊论文 -->
+  {% for post in other_author_journals_sorted %}
+    {% include archive-single.html %}
+  {% endfor %}
 
-<h2>Conference Papers</h2>
-<hr/>
+  <h2>Conference Papers</h2>
+  <hr/>
 
-<!-- 显示第一作者会议论文 -->
-{% for post in first_author_conferences_sorted %}
-  {% include archive-single.html %}
-{% endfor %}
+  <!-- 显示第一作者会议论文 -->
+  {% for post in first_author_conferences_sorted %}
+    {% include archive-single.html %}
+  {% endfor %}
 
-<!-- 显示其他作者会议论文 -->
-{% for post in other_author_conferences_sorted %}
-  {% include archive-single.html %}
-{% endfor %}
+  <!-- 显示其他作者会议论文 -->
+  {% for post in other_author_conferences_sorted %}
+    {% include archive-single.html %}
+  {% endfor %}
+</div>
 
 
 
