@@ -20,10 +20,10 @@ I'm passionate about building intelligent, high-performance (high-throughput and
   <div style="flex: 1; min-width: 300px; padding-right: 20px;">
     <h1>Interests</h1>
     <ul>
-      <li>Distributed System Workload and Performance Modeling</li>
+      <li>Distributed System Workload Forecasting</li>
       <li>Resource Provisioning</li>
       <li>AI Inference Serving Systems</li>
-      <li>Joint LLM Inference and Fine-tuning</li>
+      <li>LLM Workload Characterization and Performance Modeling</li>
     </ul>
   </div>
   
