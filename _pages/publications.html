@@ -55,11 +55,19 @@ author_profile: true
   /* 论文标题 */
   .archive__item-title {
     margin-top: 0; /* 移除标题顶部间距 */
+    margin-left: 0; /* 移除左边距，使标题向左对齐 */
+    padding-left: 0; /* 移除左内边距 */
   }
   
   /* 论文相关链接 */
   .archive__item a {
     text-decoration: underline; /* 恢复链接下划线 */
+  }
+  
+  /* 调整论文名称的位置 */
+  .archive__item .archive__item-title a {
+    margin-left: -50px; /* 使论文名称向左移动 */
+    display: inline-block; /* 确保margin-left生效 */
   }
 </style>
 
