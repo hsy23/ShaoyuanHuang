@@ -116,7 +116,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
     <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <span style="font-size: 24px; margin-right: 10px;">🌟</span>
-        <h3 style="margin: 0; color: white;">Outstanding Graduate</h3>
+        <h3 style="margin: 0; color: white;">Outstanding Graduate Student/h3>
       </div>
       <p style="margin: 0; opacity: 0.9;">Tianjin University, 2020</p>
     </div>
@@ -129,33 +129,18 @@ I'm passionate about building intelligent, high-performance (high-throughput and
   <h1>💼 Internship</h1>
   
   <div style="margin-top: 1.5em;">
-    <!-- PPIO 实习经历 1 -->
+    <!-- 合并后的PPIO实习经历 -->
     <div style="border-left: 4px solid #667eea; padding-left: 20px; margin-bottom: 30px; background: #f8f9ff; padding: 20px; border-radius: 8px;">
       <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
         <div>
           <h3 style="margin: 0; color: #333;">Algorithm Development Intern</h3>
-          <p style="margin: 5px 0; color: #666; font-weight: bold;">PPIO Cloud Computing (Shanghai) Co.</p>
+          <p style="margin: 5px 0; color: #666; font-weight: bold;">PPIO/Paiou Cloud Computing (Shanghai) Co.</p>
         </div>
-        <span style="background: #667eea; color: white; padding: 5px 12px; border-radius: 15px; font-size: 14px;">2021.09 - 2022.01</span>
+        <span style="background: #667eea; color: white; padding: 5px 12px; border-radius: 15px; font-size: 14px;">2021.09 - 2022.06</span>
       </div>
       <ul style="margin: 10px 0; color: #555;">
-        <li>Responsible for the development of cloud server workload analysis and prediction algorithms</li>
-        <li>Server utilization impact feature mining and optimization</li>
-      </ul>
-    </div>
-
-    <!-- PPIO 实习经历 2 -->
-    <div style="border-left: 4px solid #4facfe; padding-left: 20px; margin-bottom: 30px; background: #f0fbff; padding: 20px; border-radius: 8px;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-        <div>
-          <h3 style="margin: 0; color: #333;">Algorithm Development Intern</h3>
-          <p style="margin: 5px 0; color: #666; font-weight: bold;">Paiou Cloud Computing (Shanghai) Co.</p>
-        </div>
-        <span style="background: #4facfe; color: white; padding: 5px 12px; border-radius: 15px; font-size: 14px;">2022.03 - 2022.06</span>
-      </div>
-      <ul style="margin: 10px 0; color: #555;">
-        <li>Responsible for system integration of prediction algorithms</li>
-        <li>Task deployment recommender system development and optimization</li>
+        <li><strong>2021.09 - 2022.01:</strong> Development of cloud server workload analysis and prediction algorithms; Server utilization impact feature mining</li>
+        <li><strong>2022.03 - 2022.06:</strong> System integration of prediction algorithms; Task deployment recommender system development</li>
       </ul>
     </div>
   </div>
