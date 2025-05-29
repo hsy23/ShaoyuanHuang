@@ -97,6 +97,14 @@ I'm passionate about building intelligent, high-performance (high-throughput and
       <p style="margin: 0; opacity: 0.8;">CCF Computility 2024</p>
     </div>
 
+    <div style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 24px; margin-right: 10px;">🚗</span>
+        <h3 style="margin: 0; color: #333;">比亚迪奖学金</h3>
+      </div>
+      <p style="margin: 0; opacity: 0.8;">BYD, 2024</p>
+    </div>
+
     <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <span style="font-size: 24px; margin-right: 10px;">💰</span>
