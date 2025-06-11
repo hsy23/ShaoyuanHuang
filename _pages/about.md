@@ -132,6 +132,48 @@ I'm passionate about building intelligent, high-performance (high-throughput and
   </div>
 </div>
 
+<!-- Academic Service Section -->
+<div style="margin-top: 3em;">
+  <h1>🎓 Academic Service</h1>
+  
+  <div style="margin-top: 1.5em;">
+    <!-- Session Chair -->
+    <div style="border-left: 4px solid #667eea; padding-left: 20px; margin-bottom: 25px; background: #f8f9ff; padding: 20px; border-radius: 8px;">
+      <h3 style="margin: 0; color: #333; margin-bottom: 10px;">Session Chair</h3>
+      <ul style="margin: 5px 0; color: #555; list-style-type: disc; padding-left: 20px;">
+        <li>Session Chair on Workshop on Integrating Edge Intelligence and Large Model in Next Generation Networks (IEILM'24, Colocated with INFOCOM'24)</li>
+      </ul>
+    </div>
+
+    <!-- Organizing Volunteer -->
+    <div style="border-left: 4px solid #4facfe; padding-left: 20px; margin-bottom: 25px; background: #f0f8ff; padding: 20px; border-radius: 8px;">
+      <h3 style="margin: 0; color: #333; margin-bottom: 10px;">Organizing Volunteer</h3>
+      <ul style="margin: 5px 0; color: #555; list-style-type: disc; padding-left: 20px;">
+        <li>IEEE International Conference on Computer Communications (INFOCOM'25)</li>
+      </ul>
+    </div>
+
+    <!-- Reviewer -->
+    <div style="border-left: 4px solid #f093fb; padding-left: 20px; margin-bottom: 25px; background: #fef8ff; padding: 20px; border-radius: 8px;">
+      <h3 style="margin: 0; color: #333; margin-bottom: 10px;">Reviewer</h3>
+      <div style="margin: 10px 0; color: #555;">
+        <h4 style="margin: 10px 0 5px 0; color: #444; font-size: 16px;">Conferences:</h4>
+        <ul style="margin: 5px 0; list-style-type: disc; padding-left: 20px;">
+          <li>SIGKDD 2023, 2024, 2025</li>
+          <li>IEEE Conference on Vehicular Technology (VTC)</li>
+        </ul>
+        
+        <h4 style="margin: 15px 0 5px 0; color: #444; font-size: 16px;">Journals:</h4>
+        <ul style="margin: 5px 0; list-style-type: disc; padding-left: 20px;">
+          <li>IEEE Transactions on Mobile Computing (TMC)</li>
+          <li>IEEE Network Magazine</li>
+          <li>Artificial Intelligence Review</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Experience Section -->
 <div style="margin-top: 3em;">
   <h1>💼 Internship</h1>
