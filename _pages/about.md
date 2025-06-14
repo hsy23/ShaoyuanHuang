@@ -81,6 +81,14 @@ I'm passionate about building intelligent, high-performance (high-throughput and
   <h1>🏆 Awards & Honors</h1>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 1em;">
     
+    <div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 24px; margin-right: 10px;">🏆</span>
+        <h3 style="margin: 0; color: white;">诺贝尔奖获得者</h3>
+      </div>
+      <p style="margin: 0; opacity: 0.9;">2026</p>
+    </div>
+
     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <span style="font-size: 24px; margin-right: 10px;">🎓</span>
