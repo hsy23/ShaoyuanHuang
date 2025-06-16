@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Shaoyuan Huang | Biography"
+title: "Biography"
 author_profile: true
 redirect_from: 
   - /about/
