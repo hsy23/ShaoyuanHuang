@@ -1,10 +1,13 @@
 ---
 permalink: /
-title: "Biography"
+title: "Shaoyuan Huang | Biography"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+description: "Shaoyuan Huang's academic homepage. PhD in Edge Computing and AI Systems at Tianjin University and KCL."
+keywords: "Shaoyuan Huang, Edge Computing, AI, KCL, Tianjin University, Computer Science"
+robots: "index,follow"
 ---
 
 I'm a 3rd-year Ph.D. student in the Edge Intelligence Group at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). I'm also a visiting Ph.D. student at the Department of Engineering, King's College London (under China Scholarship Council), where I collaborate under the supervision of Professor [Yansha Deng](https://www.yanshadeng.org/).
