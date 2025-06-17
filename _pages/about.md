@@ -21,7 +21,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
 <div style="display: flex; flex-wrap: wrap; margin-top: 2em;">
   <!-- 左侧 Interests 部分 -->
   <div style="flex: 1; min-width: 300px; padding-right: 20px;">
-    <h1>Interests</h1>
+    <h1 class="black-title">Interests</h1>
     <ul>
       <li>Distributed System Workload Forecasting</li>
       <li>Resource Provisioning</li>
@@ -32,7 +32,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
   
   <!-- 右侧 Education 部分 -->
   <div style="flex: 1; min-width: 300px;">
-    <h1>Education</h1>
+    <h1 class="black-title">Education</h1>
     
     <!-- 伦敦国王学院访问博士 -->
     <div style="display: flex; margin-bottom: 20px; align-items: center;">
@@ -81,7 +81,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
 
 <!-- Awards & Honors Section -->
 <div style="margin-top: 3em;">
-  <h1>🏆 Awards & Honors</h1>
+  <h1 class="black-title">🏆 Awards & Honors</h1>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 1em;">
     
     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -137,7 +137,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
 
 <!-- Academic Service Section -->
 <div style="margin-top: 3em;">
-  <h1>🎓 Academic Service</h1>
+  <h1 class="black-title">🎓 Academic Service</h1>
   
   <div style="margin-top: 1.5em;">
     <!-- Session Chair -->
@@ -179,7 +179,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
 
 <!-- Experience Section -->
 <div style="margin-top: 3em;">
-  <h1>💼 Internship</h1>
+  <h1 class="black-title">💼 Internship</h1>
   
   <div style="margin-top: 1.5em;">
     <!-- 合并后的PPIO实习经历 -->
@@ -201,7 +201,7 @@ I'm passionate about building intelligent, high-performance (high-throughput and
 
 <!-- Open Source Projects Section -->
 <div style="margin-top: 3em;">
-  <h1>🚀 Open Source Projects</h1>
+  <h1 class="black-title">🚀 Open Source Projects</h1>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-top: 1.5em;">
     

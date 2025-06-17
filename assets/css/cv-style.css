@@ -233,3 +233,14 @@
     background-color: transparent;
   }
 }
+
+.black-title {
+  background: #111;
+  color: #fff;
+  padding: 0.4em 1em;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
