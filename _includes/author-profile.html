@@ -7,7 +7,11 @@
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
-    <img src="{{ site.baseurl }}/images/virtual_attach_file.jpg" alt="Tianjin University Logo" style="width:120px; border-radius:50%;">
+    {% if author.avatar contains "://" %}
+    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
+    {% else %}
+    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
+    {% endif %}
   </div>
 
   <div class="author__content">
