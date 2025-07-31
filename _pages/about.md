@@ -14,7 +14,7 @@ I'm a 3rd-year Ph.D. student in the Edge Intelligence Group at Tianjin Universit
 
 Before my Ph.D., I received my B.E. and M.E. degrees from Tianjin University, both from the College of Intelligence and Computing. I have also completed two industrial internships at PPIO [(Paiou Cloud)](https://ppio.cn/), where I developed large-scale workload prediction models and integrated intelligent task deployment systems.
 
-I'm passionate about building intelligent, high-performance (high-throughput and SLO-compliant) cloud and edge infrastructures, especially in dynamic multi-tenant environments. Recently, I've been working on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
+I'm passionate about exploring the intersection of ML and systems, with a focus on building intelligent, high-performance cloud and edge infrastructures that deliver both high throughput and SLO compliance in dynamic multi-tenant environments. My current research centers on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
 
 <!-- 🆕 I am currently on the job market, seeking research and engineering opportunities in academia and industry. Please feel free to reach out for collaboration or discussion. -->
 
