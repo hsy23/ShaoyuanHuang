@@ -1,12 +1,12 @@
 ---
 permalink: /
-title: "Biography"
+title: "Shaoyuan Huang （黄少远）"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
-description: "Shaoyuan Huang's academic homepage. PhD in Edge Computing and AI Systems at Tianjin University and KCL."
-keywords: "Shaoyuan Huang, Edge Computing, AI, KCL, Tianjin University, Computer Science"
+description: "Shaoyuan Huang (黄少远) - Ph.D. Candidate in Edge Computing and AI Systems at Tianjin University and King's College London. Research on distributed systems, workload forecasting, and AI inference."
+keywords: "Shaoyuan Huang, 黄少远, Edge Computing, AI, KCL, King's College London, Tianjin University, Computer Science, PhD, Distributed Systems, Workload Forecasting"
 robots: "index,follow"
 ---
 
