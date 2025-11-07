@@ -230,6 +230,17 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
   </div>
 </div>
 
+<!-- Visitor Map Section -->
+<div style="margin-top: 3em;">
+  <h1 class="black-title">🗺️ Places I've Visited</h1>
+  <p style="margin-top: 1em; color: #666; line-height: 1.6;">
+    This map shows the cities and countries I have visited around the world. Click on markers to see location names.
+  </p>
+  <div style="margin-top: 1.5em; border: 1px solid #e1e5e9; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+    <iframe src="/visitormap/map.html" height="600" width="100%" style="border:none;"></iframe>
+  </div>
+</div>
+
 <!-- A data-driven personal website
 ======
 Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
