@@ -4,6 +4,13 @@ var addressPoints = [
   ["Tianjin, China", 39.3434, 117.3616],
   ["Shanghai, China", 31.2304, 121.4737],
   ["Shenzhen, China", 22.5431, 114.0579],
+  ["Nanjing, Jiangsu, China", 32.0603, 118.7969],
+  ["Shijiazhuang, Hebei, China", 38.0428, 114.5149],
+  ["Haikou, Hainan, China", 20.0444, 110.1999],
+  ["Kunming, Yunnan, China", 25.0406, 102.7125],
+  ["Jinan, Shandong, China", 36.6512, 117.1205],
+  ["Lanzhou, Gansu, China", 36.0611, 103.8343],
+  ["Changchun, Jilin, China", 43.8171, 125.3235],
   
   // Spain
   ["Barcelona, Spain", 41.3851, 2.1734],
