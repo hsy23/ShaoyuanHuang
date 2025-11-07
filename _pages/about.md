@@ -186,7 +186,9 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
         <ul style="margin: 5px 0; list-style-type: disc; padding-left: 20px;">
           <li>IEEE Transactions on Machine Learning in Communications and Networking (TMLCN)</li>
           <li>IEEE Transactions on Mobile Computing (TMC)</li>
+          <li>IEEE Transactions on Cognitive Communications and Networking (TCCN)</li>
           <li>IEEE Network Magazine</li>
+          <li>IEEE Networking Letters</li>
           <li>Artificial Intelligence Review</li>
         </ul>
       </div>
