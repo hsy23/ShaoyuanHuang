@@ -237,7 +237,7 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
     This map shows the cities and countries I have visited around the world. Click on markers to see location names.
   </p>
   <div style="margin-top: 1.5em; border: 1px solid #e1e5e9; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-    <iframe src="/visitormap/map.html" height="600" width="100%" style="border:none;"></iframe>
+    <iframe src="{{ site.baseurl }}/visitormap/map.html" height="600" width="100%" style="border:none;"></iframe>
   </div>
 </div>
 
