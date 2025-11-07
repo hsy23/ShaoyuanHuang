@@ -82,73 +82,16 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
 <!-- Awards & Honors Section -->
 <div style="margin-top: 3em;">
   <h1 class="black-title">🏆 Awards & Honors</h1>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 1em;">
-    
-    <div style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">🥇</span>
-        <h3 style="margin: 0; color: white;">研究生国家奖学金（博士）</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.9;">National Scholarship for Doctoral Students, 2025</p>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">✈️</span>
-        <h3 style="margin: 0; color: white;">SIGKDD Student Travel Grant</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.9;">SIGKDD 2025</p>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">🎓</span>
-        <h3 style="margin: 0; color: white;">China Scholarship Council</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.9;">2025</p>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">🏅</span>
-        <h3 style="margin: 0; color: #333;">CCF DPCS Distinguished Doctorate</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.8;">CCF Computility 2024</p>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">🚗</span>
-        <h3 style="margin: 0; color: #333;">比亚迪奖学金</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.8;">BYD, 2024</p>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">💰</span>
-        <h3 style="margin: 0; color: white;">Suzhou Talent Scholarship</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.9;">Suzhou Government Talent Group, 2023 & 2021</p>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">⭐</span>
-        <h3 style="margin: 0; color: white;">Merit Student</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.9;">Tianjin University, 2023, 2021, 2019, 2018, 2017</p>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 24px; margin-right: 10px;">🌟</span>
-        <h3 style="margin: 0; color: white;">Outstanding Graduate</h3>
-      </div>
-      <p style="margin: 0; opacity: 0.9;">Tianjin University, 2020</p>
-    </div>
-
-  </div>
+  <ul style="margin-top: 1em; line-height: 1.8;">
+    <li>研究生国家奖学金（博士）National Scholarship for Doctoral Students, 2025</li>
+    <li>SIGKDD Student Travel Grant, SIGKDD 2025</li>
+    <li>China Scholarship Council, 2025</li>
+    <li>CCF DPCS Distinguished Doctorate, CCF Computility 2024</li>
+    <li>比亚迪奖学金 BYD Scholarship, 2024</li>
+    <li>Suzhou Talent Scholarship, Suzhou Government Talent Group, 2023 & 2021</li>
+    <li>Merit Student, Tianjin University, 2023, 2021, 2019, 2018, 2017</li>
+    <li>Outstanding Graduate, Tianjin University, 2020</li>
+  </ul>
 </div>
 
 <!-- Academic Service Section -->
