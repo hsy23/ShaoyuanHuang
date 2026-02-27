@@ -107,6 +107,14 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
       </ul>
     </div>
 
+    <!-- PC Member -->
+    <div style="border-left: 4px solid #43e97b; padding-left: 20px; margin-bottom: 25px; background: #f0fff4; padding: 20px; border-radius: 8px;">
+      <h3 style="margin: 0; color: #333; margin-bottom: 10px;">PC Member</h3>
+      <ul style="margin: 5px 0; color: #555; list-style-type: disc; padding-left: 20px;">
+        <li>IEEE International Conference on Distributed Computing Systems (ICDCS 2026)</li>
+      </ul>
+    </div>
+
     <!-- Organizing Volunteer -->
     <div style="border-left: 4px solid #4facfe; padding-left: 20px; margin-bottom: 25px; background: #f0f8ff; padding: 20px; border-radius: 8px;">
       <h3 style="margin: 0; color: #333; margin-bottom: 10px;">Organizing Volunteer</h3>
