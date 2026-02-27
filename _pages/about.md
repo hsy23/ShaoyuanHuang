@@ -122,7 +122,7 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
       <div style="margin: 10px 0; color: #555;">
         <h4 style="margin: 10px 0 5px 0; color: #444; font-size: 16px;">Conferences:</h4>
         <ul style="margin: 5px 0; list-style-type: disc; padding-left: 20px;">
-          <li>SIGKDD 2023, 2024, 2025</li>
+          <li>SIGKDD ICML ICDCS</li>
           <li>IEEE Conference on Vehicular Technology (VTC)</li>
         </ul>
         
