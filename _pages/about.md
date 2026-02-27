@@ -99,19 +99,12 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
   <h1 class="black-title">🎓 Academic Service</h1>
   
   <div style="margin-top: 1.5em;">
-    <!-- Session Chair -->
+    <!-- Session Chair & PC Member -->
     <div style="border-left: 4px solid #667eea; padding-left: 20px; margin-bottom: 25px; background: #f8f9ff; padding: 20px; border-radius: 8px;">
-      <h3 style="margin: 0; color: #333; margin-bottom: 10px;">Session Chair</h3>
+      <h3 style="margin: 0; color: #333; margin-bottom: 10px;">Session Chair & PC Member</h3>
       <ul style="margin: 5px 0; color: #555; list-style-type: disc; padding-left: 20px;">
         <li>Session Chair on Workshop on Integrating Edge Intelligence and Large Model in Next Generation Networks (IEILM'24, Colocated with INFOCOM'24)</li>
-      </ul>
-    </div>
-
-    <!-- PC Member -->
-    <div style="border-left: 4px solid #43e97b; padding-left: 20px; margin-bottom: 25px; background: #f0fff4; padding: 20px; border-radius: 8px;">
-      <h3 style="margin: 0; color: #333; margin-bottom: 10px;">PC Member</h3>
-      <ul style="margin: 5px 0; color: #555; list-style-type: disc; padding-left: 20px;">
-        <li>IEEE International Conference on Distributed Computing Systems (ICDCS 2026)</li>
+        <li>PC Member, IEEE International Conference on Distributed Computing Systems (ICDCS 2026)</li>
       </ul>
     </div>
 
