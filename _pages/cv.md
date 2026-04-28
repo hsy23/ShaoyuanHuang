@@ -7,6 +7,6 @@ redirect_from:
   - /resume
 ---
 
-<meta http-equiv="refresh" content="0; url={{ site.baseurl }}/CV_ShaoyuanHuang_Eng_v2025_final.pdf">
+<meta http-equiv="refresh" content="0; url={{ site.baseurl }}/CV_ShaoyuanHuang_v2026_0428.pdf">
 
-<p>If you are not redirected automatically, follow this <a href="{{ site.baseurl }}/CV_ShaoyuanHuang_Eng_v2025_final.pdf">link to my CV</a>.</p>
+<p>If you are not redirected automatically, follow this <a href="{{ site.baseurl }}/CV_ShaoyuanHuang_v2026_0428.pdf">link to my CV</a>.</p>
