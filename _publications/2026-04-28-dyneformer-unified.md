@@ -10,6 +10,5 @@ venue: 'IEEE Transactions on Knowledge and Data Engineering (TKDE)'
 paperurl: ''
 research_areas:
   - Workload Forecasting
-  - AI Systems
 citation: '<b>Shaoyuan Huang</b>, Zheng Wang, Heng Zhang, Xiaofei Wang, Cheng Zhang, Wenyu Wang. (2026). &quot;DynEformer: A Unified Framework for Robust Workload Prediction Under Dynamic Environment.&quot; <i>IEEE Transactions on Knowledge and Data Engineering (TKDE)</i>. (JCR Q1, CAS Q1, CCF-A, IF: 10.4).'
 ---
