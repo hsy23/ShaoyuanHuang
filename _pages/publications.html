@@ -303,7 +303,7 @@ author_profile: true
 
   <div class="pub-summary">
     <span><strong id="pub-visible-count">{{ publications_sorted | size }}</strong> / {{ publications_sorted | size }} publications</span>
-    <span>Highlight marks CCF-A, JCR Q1, CAS Q1, or selected papers.</span>
+    <span>Papers can have multiple area tags; highlight marks CCF-A, JCR Q1, CAS Q1, or selected papers.</span>
   </div>
 
   <div class="pub-list" id="publication-list">
@@ -337,7 +337,8 @@ author_profile: true
       cards.forEach(function (card) {
         var matchesSearch = !query || (card.dataset.search || "").indexOf(query) !== -1;
         var matchesType = state.type === "all" || card.dataset.type === state.type;
-        var matchesArea = state.area === "all" || card.dataset.area === state.area;
+        var cardAreas = (card.dataset.areas || "").split(" ");
+        var matchesArea = state.area === "all" || cardAreas.indexOf(state.area) !== -1;
         var matchesQuality = state.quality === "all" || card.dataset.quality === state.quality;
         var show = matchesSearch && matchesType && matchesArea && matchesQuality;
 

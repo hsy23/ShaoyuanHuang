@@ -3,17 +3,31 @@
 {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% assign pub_text = post.title | append: " " | append: post.venue | append: " " | append: post.citation | downcase %}
 
-{% if post.research_area and post.research_area != "" %}
-  {% assign area = post.research_area %}
-{% elsif pub_text contains "llm" or pub_text contains "rag" or pub_text contains "inference" or pub_text contains "deep learning" or pub_text contains "ai framework" %}
-  {% assign area = "AI Systems" %}
+{% if pub_text contains "llm" or pub_text contains "rag" or pub_text contains "inference" or pub_text contains "deep learning" or pub_text contains "ai framework" %}
+  {% assign fallback_area = "AI Systems" %}
 {% elsif pub_text contains "workload" or pub_text contains "forecasting" or pub_text contains "time series" or pub_text contains "load forecasting" or pub_text contains "hot spots" %}
-  {% assign area = "Workload Forecasting" %}
+  {% assign fallback_area = "Workload Forecasting" %}
 {% elsif pub_text contains "edge cloud" or pub_text contains "cloud-edge" or pub_text contains "latency" or pub_text contains "qos" or pub_text contains "resource" or pub_text contains "scheduling" %}
-  {% assign area = "Cloud-Edge Systems" %}
+  {% assign fallback_area = "Cloud-Edge Systems" %}
 {% else %}
-  {% assign area = "Spatio-Temporal Analytics" %}
+  {% assign fallback_area = "Spatio-Temporal Analytics" %}
 {% endif %}
+
+{% if post.research_areas %}
+  {% assign areas = post.research_areas %}
+{% elsif post.research_area and post.research_area != "" %}
+  {% assign areas = post.research_area | split: "|" %}
+{% else %}
+  {% assign areas = fallback_area | split: "|" %}
+{% endif %}
+
+{% assign area_slugs = "" | split: "" %}
+{% for area in areas %}
+  {% assign area_slug = area | strip | downcase | replace: ' ', '-' %}
+  {% assign area_slugs = area_slugs | push: area_slug %}
+{% endfor %}
+{% assign area_slugs_text = area_slugs | join: " " %}
+{% assign area_labels_text = areas | join: " " %}
 
 {% if post.category == "journals" %}
   {% assign pub_type = "journal" %}
@@ -52,6 +66,8 @@
   {% assign venue_code = "IWQoS'" | append: year_short %}
 {% elsif post.venue contains "AAAI" %}
   {% assign venue_code = "AAAI'" | append: year_short %}
+{% elsif post.venue contains "ICML" or post.venue contains "Machine Learning" %}
+  {% assign venue_code = "ICML'" | append: year_short %}
 {% elsif post.venue contains "Mobile Ad-Hoc" %}
   {% assign venue_code = "MASS'" | append: year_short %}
 {% elsif post.venue contains "Network and Parallel Computing" or post.venue contains "NPC" %}
@@ -78,12 +94,12 @@
   {% assign home_url = post.paperurl %}
 {% endif %}
 
-{% capture search_text %}{{ title }} {{ post.venue }} {{ post.citation | strip_html }} {{ area }} {{ pub_type_label }} {{ post.date | date: "%Y" }}{% endcapture %}
+{% capture search_text %}{{ title }} {{ post.venue }} {{ post.citation | strip_html }} {{ area_labels_text }} {{ pub_type_label }} {{ post.date | date: "%Y" }}{% endcapture %}
 
 <article class="pub-card{% if is_highlight %} pub-card--highlight{% endif %}"
   data-pub-card
   data-type="{{ pub_type }}"
-  data-area="{{ area | downcase | replace: ' ', '-' }}"
+  data-areas="{{ area_slugs_text }}"
   data-quality="{% if is_highlight %}highlight{% else %}regular{% endif %}"
   data-search="{{ search_text | strip_newlines | downcase | escape }}">
 
@@ -105,7 +121,9 @@
     <div class="pub-card__meta">
       <span>{{ pub_type_label }}</span>
       <span>{{ post.date | date: "%Y" }}</span>
-      <span>{{ area }}</span>
+      {% for area in areas %}
+        <span>{{ area }}</span>
+      {% endfor %}
     </div>
 
     <div class="pub-card__citation">{{ post.citation }}</div>

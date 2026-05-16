@@ -1,0 +1,57 @@
+name: Discover Publication Candidates
+
+on:
+  schedule:
+    - cron: "0 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Discover candidate publications
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+        run: |
+          python scripts/discover_publications.py --since-year 2024 --use-google
+
+      - name: Create or update candidate pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH_NAME: auto/publication-candidates
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No new publication candidates."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH_NAME"
+          git add _publication_candidates
+          git commit -m "Discover publication candidates"
+          git push --force-with-lease origin "$BRANCH_NAME"
+
+          if gh pr view --head "$BRANCH_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Candidate pull request already exists."
+          else
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --head "$BRANCH_NAME" \
+              --base "${{ github.event.repository.default_branch }}" \
+              --title "Review discovered publication candidates" \
+              --body "Automated publication discovery found candidate entries in \`_publication_candidates/\`. Review them, then move confirmed entries into \`_publications/\`."
+          fi
