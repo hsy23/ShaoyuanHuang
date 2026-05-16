@@ -1,0 +1,154 @@
+{% include base_path %}
+
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign pub_text = post.title | append: " " | append: post.venue | append: " " | append: post.citation | downcase %}
+
+{% if post.research_area and post.research_area != "" %}
+  {% assign area = post.research_area %}
+{% elsif pub_text contains "llm" or pub_text contains "rag" or pub_text contains "inference" or pub_text contains "deep learning" or pub_text contains "ai framework" %}
+  {% assign area = "AI Systems" %}
+{% elsif pub_text contains "workload" or pub_text contains "forecasting" or pub_text contains "time series" or pub_text contains "load forecasting" or pub_text contains "hot spots" %}
+  {% assign area = "Workload Forecasting" %}
+{% elsif pub_text contains "edge cloud" or pub_text contains "cloud-edge" or pub_text contains "latency" or pub_text contains "qos" or pub_text contains "resource" or pub_text contains "scheduling" %}
+  {% assign area = "Cloud-Edge Systems" %}
+{% else %}
+  {% assign area = "Spatio-Temporal Analytics" %}
+{% endif %}
+
+{% if post.category == "journals" %}
+  {% assign pub_type = "journal" %}
+  {% assign pub_type_label = "Journal" %}
+{% elsif post.category == "conferences" %}
+  {% assign pub_type = "conference" %}
+  {% assign pub_type_label = "Conference" %}
+{% else %}
+  {% assign pub_type = "preprint" %}
+  {% assign pub_type_label = "Preprint" %}
+{% endif %}
+
+{% assign year_short = post.date | date: "%y" %}
+{% assign venue_code = "" %}
+{% if post.venue_short and post.venue_short != "" %}
+  {% assign venue_code = post.venue_short %}
+{% elsif post.venue contains "SIGKDD" or post.venue contains "ACM KDD" %}
+  {% assign venue_code = "KDD'" | append: year_short %}
+{% elsif post.venue contains "INFOCOM" %}
+  {% assign venue_code = "INFOCOM'" | append: year_short %}
+{% elsif post.venue contains "TKDE" or post.venue contains "Knowledge and Data Engineering" %}
+  {% assign venue_code = "TKDE'" | append: year_short %}
+{% elsif post.venue contains "Mobile Computing" %}
+  {% assign venue_code = "TMC'" | append: year_short %}
+{% elsif post.venue contains "Parallel and Distributed Systems" %}
+  {% assign venue_code = "TPDS'" | append: year_short %}
+{% elsif post.venue contains "Transactions on Cloud Computing" or post.venue contains "TCC" %}
+  {% assign venue_code = "TCC'" | append: year_short %}
+{% elsif post.venue contains "Journal of Cloud Computing" %}
+  {% assign venue_code = "JCC'" | append: year_short %}
+{% elsif post.venue contains "CIKM" %}
+  {% assign venue_code = "CIKM'" | append: year_short %}
+{% elsif post.venue contains "SmartIoT" %}
+  {% assign venue_code = "SmartIoT'" | append: year_short %}
+{% elsif post.venue contains "IWQoS" or post.venue contains "Quality of Service" %}
+  {% assign venue_code = "IWQoS'" | append: year_short %}
+{% elsif post.venue contains "AAAI" %}
+  {% assign venue_code = "AAAI'" | append: year_short %}
+{% elsif post.venue contains "Mobile Ad-Hoc" %}
+  {% assign venue_code = "MASS'" | append: year_short %}
+{% elsif post.venue contains "Network and Parallel Computing" or post.venue contains "NPC" %}
+  {% assign venue_code = "NPC'" | append: year_short %}
+{% elsif post.venue contains "Communications" or post.venue contains "ICC" %}
+  {% assign venue_code = "ICC'" | append: year_short %}
+{% elsif post.venue contains "ECAI" %}
+  {% assign venue_code = "ECAI'" | append: year_short %}
+{% elsif post.venue contains "arXiv" %}
+  {% assign venue_code = "arXiv'" | append: year_short %}
+{% else %}
+  {% assign venue_code = post.date | date: "%Y" %}
+{% endif %}
+
+{% assign is_highlight = false %}
+{% if post.highlight or post.quality == "CCF-A" or post.citation contains "CCF-A" or post.citation contains "JCR-1" or post.citation contains "JCR Q1" or post.citation contains "CAS Q1" %}
+  {% assign is_highlight = true %}
+{% endif %}
+
+{% assign home_url = "" %}
+{% if post.homepage and post.homepage != "" %}
+  {% assign home_url = post.homepage %}
+{% elsif post.paperurl and post.paperurl != "" %}
+  {% assign home_url = post.paperurl %}
+{% endif %}
+
+{% capture search_text %}{{ title }} {{ post.venue }} {{ post.citation | strip_html }} {{ area }} {{ pub_type_label }} {{ post.date | date: "%Y" }}{% endcapture %}
+
+<article class="pub-card{% if is_highlight %} pub-card--highlight{% endif %}"
+  data-pub-card
+  data-type="{{ pub_type }}"
+  data-area="{{ area | downcase | replace: ' ', '-' }}"
+  data-quality="{% if is_highlight %}highlight{% else %}regular{% endif %}"
+  data-search="{{ search_text | strip_newlines | downcase | escape }}">
+
+  <div class="pub-card__main">
+    <div class="pub-card__heading">
+      <div class="pub-card__venue">
+        [{{ venue_code }}]
+      </div>
+
+      <h3 class="pub-card__title">
+        {% if home_url != "" %}
+          <a href="{{ home_url }}" target="_blank" rel="noopener">{{ title }}</a>
+        {% else %}
+          <a href="{{ site.baseurl }}{{ page.url }}">{{ title }}</a>
+        {% endif %}
+      </h3>
+    </div>
+
+    <div class="pub-card__meta">
+      <span>{{ pub_type_label }}</span>
+      <span>{{ post.date | date: "%Y" }}</span>
+      <span>{{ area }}</span>
+    </div>
+
+    <div class="pub-card__citation">{{ post.citation }}</div>
+
+    <div class="pub-card__actions">
+      {% if home_url != "" %}
+        <a class="pub-card__button" href="{{ home_url }}" target="_blank" rel="noopener">Homepage</a>
+      {% else %}
+        <a class="pub-card__button" href="{{ site.baseurl }}{{ page.url }}">Homepage</a>
+      {% endif %}
+
+      {% if post.paperurl and post.paperurl != "" %}
+        <a class="pub-card__button" href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>
+      {% endif %}
+
+      {% if post.slidesurl and post.slidesurl != "" %}
+        <a class="pub-card__button" href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>
+      {% endif %}
+
+      {% if post.bibtexurl and post.bibtexurl != "" %}
+        <a class="pub-card__button" href="{{ post.bibtexurl }}" target="_blank" rel="noopener">BibTeX</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="pub-card__badges">
+    {% if is_highlight %}
+      <span class="pub-badge pub-badge--highlight">Highlight</span>
+    {% endif %}
+    {% if post.quality and post.quality != "" %}
+      <span class="pub-badge pub-badge--rank">{{ post.quality }}</span>
+    {% elsif post.citation contains "CCF-A" %}
+      <span class="pub-badge pub-badge--rank">CCF-A</span>
+    {% elsif post.citation contains "CCF-B" %}
+      <span class="pub-badge pub-badge--rank">CCF-B</span>
+    {% elsif post.citation contains "CCF-C" %}
+      <span class="pub-badge pub-badge--rank">CCF-C</span>
+    {% endif %}
+    {% if post.citation contains "JCR-1" or post.citation contains "JCR Q1" %}
+      <span class="pub-badge pub-badge--journal">JCR Q1</span>
+    {% endif %}
+    {% if post.citation contains "CAS Q1" %}
+      <span class="pub-badge pub-badge--journal">CAS Q1</span>
+    {% endif %}
+  </div>
+</article>

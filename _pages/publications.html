@@ -5,141 +5,364 @@ permalink: /publications/
 author_profile: true
 ---
 
+{% include base_path %}
+
 <style>
-  /* 统一页面布局 */
   .page__content {
-    padding-right: 0; /* 移除默认右内边距 */
+    padding-right: 0;
   }
-  
-  /* 页面标题 */
-  .page__title {
-    padding-left: 65px; /* 使页面标题与内容对齐 */
+
+  .page__title,
+  .wordwrap,
+  .publications-page {
+    margin-left: 65px;
   }
-  
-  /* 整体内容右移 */
-  .archive {
-    padding-left: 30px; /* 向右移动整个内容 */
-  }
-  
-  /* Google Scholar 信息 */
+
   .wordwrap {
-    padding-left: 65px; /* 与论文标题对齐 */
-    margin-bottom: 30px; /* 增加底部间距 */
+    margin-bottom: 22px;
   }
-  
-  /* 论文内容区域 */
-  .publications-content {
-    padding-left: 0; /* 重置内边距 */
-    margin-left: 0; /* 重置左边距 */
+
+  .publications-page {
+    max-width: 980px;
   }
-  
-  /* 论文分类标题 */
-  .publications-content h2 {
-    padding-left: 65px; /* 与论文内容对齐 */
-    margin-bottom: 10px; /* 减少与分隔线的间距 */
+
+  .pub-toolbar {
+    border: 1px solid #d9e1ea;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 0 0 24px;
+    background: #ffffff;
   }
-  
-  /* 分隔线 */
-  .publications-content hr {
-    margin-left: 65px; /* 与标题对齐 */
-    width: calc(100% - 65px); /* 调整分隔线宽度 */
-    margin-bottom: 25px; /* 增加与内容的间距 */
+
+  .pub-search {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #c8d2dc;
+    border-radius: 6px;
+    padding: 0 12px;
+    font-size: 0.95em;
+    margin-bottom: 14px;
   }
-  
-  /* 单个论文条目 */
-  .list__item {
-    padding-left: 65px; /* 统一左内边距 */
-    margin-bottom: 15px; /* 增加论文条目间的间距 */
+
+  .pub-search:focus {
+    outline: 2px solid #8ab4f8;
+    outline-offset: 1px;
+    border-color: #5b8def;
   }
-  
-  /* 论文标题 */
-  .archive__item-title {
-    margin-top: 0; /* 移除标题顶部间距 */
-    margin-left: 0; /* 移除左边距，使标题向左对齐 */
-    padding-left: 0; /* 移除左内边距 */
+
+  .pub-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
   }
-  
-  /* 论文相关链接 */
-  .archive__item a {
-    text-decoration: underline; /* 恢复链接下划线 */
+
+  .pub-filter-row:last-child {
+    margin-bottom: 0;
   }
-  
-  /* 调整论文名称的位置 */
-  .archive__item .archive__item-title a {
-    margin-left: -65px; /* 使论文名称向左移动 */
-    display: inline-block; /* 确保margin-left生效 */
+
+  .pub-filter-label {
+    min-width: 72px;
+    padding-top: 6px;
+    color: #4b5563;
+    font-size: 0.82em;
+    font-weight: 700;
+  }
+
+  .pub-filter-button {
+    border: 1px solid #c8d2dc;
+    border-radius: 6px;
+    background: #f8fafc;
+    color: #263238;
+    font-size: 0.82em;
+    line-height: 1;
+    padding: 8px 11px;
+    cursor: pointer;
+  }
+
+  .pub-filter-button:hover,
+  .pub-filter-button.is-active {
+    border-color: #1565c0;
+    background: #e8f1fb;
+    color: #0f477f;
+  }
+
+  .pub-summary {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 14px;
+    color: #4b5563;
+    font-size: 0.86em;
+  }
+
+  .pub-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .pub-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+    border: 1px solid #dce3ea;
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+
+  .pub-card--highlight {
+    border-left: 5px solid #c62828;
+    background: #fffdfb;
+  }
+
+  .pub-card__heading {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 9px;
+    align-items: baseline;
+  }
+
+  .pub-card__venue {
+    color: #c62828;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .pub-card__title {
+    margin: 0;
+    font-size: 1.02em;
+    line-height: 1.35;
+  }
+
+  .pub-card__title a {
+    color: #1f2937;
+    text-decoration: none;
+  }
+
+  .pub-card__title a:hover {
+    color: #1565c0;
+    text-decoration: underline;
+  }
+
+  .pub-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 8px 0;
+    color: #4b5563;
+    font-size: 0.78em;
+  }
+
+  .pub-card__meta span {
+    border: 1px solid #d9e1ea;
+    border-radius: 999px;
+    padding: 3px 8px;
+    background: #f8fafc;
+  }
+
+  .pub-card__citation {
+    color: #374151;
+    font-size: 0.85em;
+    line-height: 1.55;
+  }
+
+  .pub-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .pub-card__button {
+    border: 1px solid #b8c4d2;
+    border-radius: 6px;
+    padding: 5px 9px;
+    color: #1f4f7a;
+    background: #f9fbfd;
+    font-size: 0.78em;
+    text-decoration: none;
+  }
+
+  .pub-card__button:hover {
+    border-color: #1565c0;
+    color: #0f477f;
+    text-decoration: none;
+  }
+
+  .pub-card__badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .pub-badge {
+    border-radius: 999px;
+    padding: 4px 9px;
+    font-size: 0.74em;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .pub-badge--highlight {
+    background: #fde8e8;
+    color: #b91c1c;
+  }
+
+  .pub-badge--rank {
+    background: #e8f1fb;
+    color: #0f477f;
+  }
+
+  .pub-badge--journal {
+    background: #ecfdf3;
+    color: #166534;
+  }
+
+  .pub-empty {
+    display: none;
+    border: 1px dashed #c8d2dc;
+    border-radius: 8px;
+    padding: 20px;
+    color: #4b5563;
+    text-align: center;
+  }
+
+  .pub-empty.is-visible {
+    display: block;
+  }
+
+  [data-pub-card][hidden] {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .page__title,
+    .wordwrap,
+    .publications-page {
+      margin-left: 0;
+    }
+
+    .pub-card {
+      grid-template-columns: 1fr;
+    }
+
+    .pub-card__heading {
+      grid-template-columns: 1fr;
+    }
+
+    .pub-card__badges {
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .pub-filter-label {
+      width: 100%;
+      min-width: 0;
+    }
   }
 </style>
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-{% include base_path %}
+{% assign publications_sorted = site.publications | sort: "date" | reverse %}
 
-<!-- 创建排序后的论文数组 -->
-{% assign journal_papers = site.publications | where: "category", "journals" %}
-{% assign conference_papers = site.publications | where: "category", "conferences" %}
+<div class="publications-page" data-publications-page>
+  <div class="pub-toolbar">
+    <input id="pub-search" class="pub-search" type="search" placeholder="Search publications" autocomplete="off" spellcheck="false">
 
-<!-- 分离第一作者和非第一作者的期刊论文 -->
-{% assign first_author_journals = "" | split: "" %}
-{% assign other_author_journals = "" | split: "" %}
+    <div class="pub-filter-row" data-filter-group="type">
+      <div class="pub-filter-label">Type</div>
+      <button class="pub-filter-button is-active" type="button" data-filter-value="all">All</button>
+      <button class="pub-filter-button" type="button" data-filter-value="conference">Conference</button>
+      <button class="pub-filter-button" type="button" data-filter-value="journal">Journal</button>
+      <button class="pub-filter-button" type="button" data-filter-value="preprint">Preprint</button>
+    </div>
 
-{% for post in journal_papers %}
-  {% assign citation_start = post.citation | slice: 0, 21 %}
-  {% if citation_start == "<b>Shaoyuan Huang</b>" %}
-    {% assign first_author_journals = first_author_journals | push: post %}
-  {% else %}
-    {% assign other_author_journals = other_author_journals | push: post %}
-  {% endif %}
-{% endfor %}
+    <div class="pub-filter-row" data-filter-group="area">
+      <div class="pub-filter-label">Area</div>
+      <button class="pub-filter-button is-active" type="button" data-filter-value="all">All</button>
+      <button class="pub-filter-button" type="button" data-filter-value="workload-forecasting">Workload Forecasting</button>
+      <button class="pub-filter-button" type="button" data-filter-value="cloud-edge-systems">Cloud-Edge Systems</button>
+      <button class="pub-filter-button" type="button" data-filter-value="ai-systems">AI Systems</button>
+      <button class="pub-filter-button" type="button" data-filter-value="spatio-temporal-analytics">Spatio-Temporal Analytics</button>
+    </div>
 
-<!-- 分离第一作者和非第一作者的会议论文 -->
-{% assign first_author_conferences = "" | split: "" %}
-{% assign other_author_conferences = "" | split: "" %}
+    <div class="pub-filter-row" data-filter-group="quality">
+      <div class="pub-filter-label">Quality</div>
+      <button class="pub-filter-button is-active" type="button" data-filter-value="all">All</button>
+      <button class="pub-filter-button" type="button" data-filter-value="highlight">Highlight</button>
+    </div>
+  </div>
 
-{% for post in conference_papers %}
-  {% assign citation_start = post.citation | slice: 0, 21 %}
-  {% if citation_start == "<b>Shaoyuan Huang</b>" %}
-    {% assign first_author_conferences = first_author_conferences | push: post %}
-  {% else %}
-    {% assign other_author_conferences = other_author_conferences | push: post %}
-  {% endif %}
-{% endfor %}
+  <div class="pub-summary">
+    <span><strong id="pub-visible-count">{{ publications_sorted | size }}</strong> / {{ publications_sorted | size }} publications</span>
+    <span>Highlight marks CCF-A, JCR Q1, CAS Q1, or selected papers.</span>
+  </div>
 
-<!-- 按年份排序 -->
-{% assign first_author_journals_sorted = first_author_journals | sort: "date" | reverse %}
-{% assign other_author_journals_sorted = other_author_journals | sort: "date" | reverse %}
-{% assign first_author_conferences_sorted = first_author_conferences | sort: "date" | reverse %}
-{% assign other_author_conferences_sorted = other_author_conferences | sort: "date" | reverse %}
+  <div class="pub-list" id="publication-list">
+    {% for post in publications_sorted %}
+      {% include publication-card.html %}
+    {% endfor %}
+  </div>
 
-<div class="publications-content">
-  <h2>Journal Papers</h2>
-  <hr/>
-
-  <!-- 显示第一作者期刊论文 -->
-  {% for post in first_author_journals_sorted %}
-    {% include archive-single.html %}
-  {% endfor %}
-
-  <!-- 显示其他作者期刊论文 -->
-  {% for post in other_author_journals_sorted %}
-    {% include archive-single.html %}
-  {% endfor %}
-
-  <h2>Conference Papers</h2>
-  <hr/>
-
-  <!-- 显示第一作者会议论文 -->
-  {% for post in first_author_conferences_sorted %}
-    {% include archive-single.html %}
-  {% endfor %}
-
-  <!-- 显示其他作者会议论文 -->
-  {% for post in other_author_conferences_sorted %}
-    {% include archive-single.html %}
-  {% endfor %}
+  <div class="pub-empty" id="pub-empty">No publications match the current filters.</div>
 </div>
 
+<script>
+  (function () {
+    var root = document.querySelector("[data-publications-page]");
+    if (!root) return;
 
+    var searchInput = document.getElementById("pub-search");
+    var cards = Array.prototype.slice.call(root.querySelectorAll("[data-pub-card]"));
+    var count = document.getElementById("pub-visible-count");
+    var empty = document.getElementById("pub-empty");
+    var state = {
+      type: "all",
+      area: "all",
+      quality: "all"
+    };
 
+    function applyFilters() {
+      var query = (searchInput.value || "").trim().toLowerCase();
+      var visible = 0;
+
+      cards.forEach(function (card) {
+        var matchesSearch = !query || (card.dataset.search || "").indexOf(query) !== -1;
+        var matchesType = state.type === "all" || card.dataset.type === state.type;
+        var matchesArea = state.area === "all" || card.dataset.area === state.area;
+        var matchesQuality = state.quality === "all" || card.dataset.quality === state.quality;
+        var show = matchesSearch && matchesType && matchesArea && matchesQuality;
+
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+
+      count.textContent = visible;
+      empty.classList.toggle("is-visible", visible === 0);
+    }
+
+    root.querySelectorAll("[data-filter-group]").forEach(function (group) {
+      group.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-filter-value]");
+        if (!button) return;
+
+        state[group.dataset.filterGroup] = button.dataset.filterValue;
+        group.querySelectorAll("[data-filter-value]").forEach(function (item) {
+          item.classList.toggle("is-active", item === button);
+        });
+
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener("input", applyFilters);
+  })();
+</script>
