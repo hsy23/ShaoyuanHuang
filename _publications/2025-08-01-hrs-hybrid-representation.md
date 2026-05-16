@@ -9,6 +9,5 @@ paperurl: 'https://arxiv.org/abs/2508.12839'
 research_areas:
   - Workload Forecasting
   - Cloud-Edge Systems
-  - AI Systems
 citation: 'Tiancheng Zhang, Cheng Zhang, Shuren Liu, Xiaofei Wang, <b>Shaoyuan Huang</b>, Wenyu Wang. (2025). &quot;HRS: Hybrid Representation Framework with Scheduling Awareness for Time Series Forecasting in Crowdsourced Cloud-Edge Platforms.&quot; <i>European Conference on Artificial Intelligence (ECAI)</i>.'
 ---
