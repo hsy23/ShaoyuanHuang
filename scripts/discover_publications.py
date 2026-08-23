@@ -18,8 +18,8 @@ import time
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
-from typing import Iterable
 
 
 AUTHOR_NAME = "Shaoyuan Huang"
@@ -38,6 +38,16 @@ COAUTHOR_HINTS = {
     "xiangqi liu",
     "tengwen zhang",
     "zhongtian zhang",
+    "chao qiu",
+    "shuren liu",
+    "nan xue",
+    "yedong ning",
+    "yansha deng",
+    "yan gao",
+    "yonghui ye",
+    "jie fu",
+    "minglai shao",
+    "huaming wu",
 }
 
 AREA_KEYWORDS = {
@@ -53,6 +63,10 @@ AREA_KEYWORDS = {
         "transformer",
         "speculative",
         "model parallel",
+        "expert routing",
+        "memory-aware",
+        "lmaas",
+        "llm-as-a-service",
     ],
     "Workload Forecasting": [
         "workload",
@@ -92,6 +106,7 @@ AREA_KEYWORDS = {
         "matrix imputation",
         "graph attention",
         "network latency",
+        "network traffic",
     ],
 }
 
@@ -146,6 +161,10 @@ def request_json(url: str, retries: int = 3) -> dict:
 
 def normalize_title(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+
+
+def normalize_author(author: str) -> str:
+    return re.sub(r"\s+", " ", author.lower()).strip()
 
 
 def slugify(title: str) -> str:
@@ -222,16 +241,25 @@ def infer_quality(venue: str) -> str:
     return ""
 
 
+def coauthor_hint_count(authors: list[str]) -> int:
+    return sum(1 for author in authors if normalize_author(author) in COAUTHOR_HINTS)
+
+
+def has_area_keyword(text: str) -> bool:
+    text_l = text.lower()
+    return any(keyword in text_l for keywords in AREA_KEYWORDS.values() for keyword in keywords)
+
+
 def confidence_score(title: str, authors: list[str], abstract: str) -> int:
-    authors_l = [author.lower() for author in authors]
+    authors_l = [normalize_author(author) for author in authors]
     if AUTHOR_NORMALIZED not in authors_l:
         return 0
     score = 4
-    score += min(3, sum(1 for author in authors_l if author in COAUTHOR_HINTS))
-    text = f"{title} {abstract}".lower()
-    if any(keyword in text for keywords in AREA_KEYWORDS.values() for keyword in keywords):
+    score += min(3, coauthor_hint_count(authors))
+    text = f"{title} {abstract}"
+    if has_area_keyword(text):
         score += 1
-    if "tianjin university" in text or "edge" in text:
+    if "tianjin university" in text.lower() or "edge" in text.lower():
         score += 1
     return score
 
@@ -278,12 +306,13 @@ def extract_openalex_candidate(work: dict) -> Candidate | None:
     )
 
 
-def discover_openalex(since_year: int, per_page: int) -> list[Candidate]:
+def discover_openalex(since_year: int, until_date: str, per_page: int) -> list[Candidate]:
     params = {
         "search": AUTHOR_NAME,
-        "filter": f"from_publication_date:{since_year}-01-01",
+        "filter": f"from_publication_date:{since_year}-01-01,to_publication_date:{until_date}",
         "per-page": str(per_page),
         "sort": "publication_date:desc",
+        "mailto": "hsy_23@tju.edu.cn",
     }
     url = "https://api.openalex.org/works?" + urllib.parse.urlencode(params)
     data = request_json(url)
@@ -298,6 +327,111 @@ def discover_openalex(since_year: int, per_page: int) -> list[Candidate]:
             continue
         seen.add(key)
         candidates.append(candidate)
+    return candidates
+
+
+def crossref_date(item: dict) -> str:
+    date_parts = (
+        item.get("published-print", {})
+        or item.get("published-online", {})
+        or item.get("published", {})
+        or item.get("created", {})
+    ).get("date-parts") or [[1900, 1, 1]]
+    parts = list(date_parts[0])
+    while len(parts) < 3:
+        parts.append(1)
+    return f"{int(parts[0]):04d}-{int(parts[1]):02d}-{int(parts[2]):02d}"
+
+
+def crossref_authors(item: dict) -> list[str]:
+    authors: list[str] = []
+    for author in item.get("author") or []:
+        given = (author.get("given") or "").strip()
+        family = (author.get("family") or "").strip()
+        name = " ".join(part for part in [given, family] if part).strip()
+        if name:
+            authors.append(name)
+    return authors
+
+
+def extract_crossref_candidate(item: dict) -> Candidate | None:
+    title = html.unescape((item.get("title") or [""])[0]).strip()
+    if not title:
+        return None
+
+    authors = crossref_authors(item)
+    authors_l = {normalize_author(author) for author in authors}
+    if AUTHOR_NORMALIZED not in authors_l:
+        return None
+
+    abstract = re.sub(r"<[^>]+>", "", item.get("abstract") or "")
+    if coauthor_hint_count(authors) == 0 and not has_area_keyword(title):
+        return None
+
+    confidence = confidence_score(title, authors, abstract)
+    if confidence < 5:
+        return None
+
+    date_text = crossref_date(item)
+    year = int(date_text[:4])
+    venue = html.unescape((item.get("container-title") or ["Publication"])[0] or "Publication").strip()
+    doi = (item.get("DOI") or "").strip()
+    url = f"https://doi.org/{doi}" if doi else (item.get("URL") or "").strip()
+
+    return Candidate(
+        title=title,
+        authors=authors,
+        date=date_text,
+        year=year,
+        venue=venue,
+        url=url,
+        doi=doi,
+        category=infer_category({"type_crossref": item.get("type")}, venue),
+        areas=infer_areas(title, abstract),
+        quality=infer_quality(venue),
+        confidence=confidence,
+        source="Crossref",
+        source_url=(item.get("URL") or url).strip(),
+        abstract=abstract,
+    )
+
+
+def discover_crossref(since_year: int, until_date: str, per_page: int) -> list[Candidate]:
+    query_terms = [
+        f"{AUTHOR_NAME} Xiaofei Wang",
+        f"{AUTHOR_NAME} Cheng Zhang",
+        f"{AUTHOR_NAME} Wenyu Wang",
+        f"{AUTHOR_NAME} Heng Zhang",
+        f"{AUTHOR_NAME} Yuting Li",
+        f"{AUTHOR_NAME} Tiancheng Zhang",
+        f"{AUTHOR_NAME} Yunfeng Zhao",
+        f"{AUTHOR_NAME} edge cloud",
+        f"{AUTHOR_NAME} workload",
+        f"{AUTHOR_NAME} LLM",
+    ]
+
+    candidates: list[Candidate] = []
+    seen: set[str] = set()
+    for query in query_terms:
+        params = {
+            "query": query,
+            "filter": f"from-pub-date:{since_year}-01-01,until-pub-date:{until_date}",
+            "rows": str(per_page),
+            "sort": "score",
+            "mailto": "hsy_23@tju.edu.cn",
+        }
+        url = "https://api.crossref.org/works?" + urllib.parse.urlencode(params)
+        data = request_json(url)
+        for item in (data.get("message") or {}).get("items") or []:
+            candidate = extract_crossref_candidate(item)
+            if not candidate:
+                continue
+            key = normalize_title(candidate.title)
+            if key in seen:
+                continue
+            seen.add(key)
+            candidates.append(candidate)
+
     return candidates
 
 
@@ -406,6 +540,7 @@ def main() -> int:
     parser.add_argument("--publications-dir", default="_publications")
     parser.add_argument("--output-dir", default="_publication_candidates")
     parser.add_argument("--since-year", type=int, default=2024)
+    parser.add_argument("--until-date", default=date.today().isoformat())
     parser.add_argument("--per-page", type=int, default=100)
     parser.add_argument("--min-confidence", type=int, default=5)
     parser.add_argument("--use-google", action="store_true")
@@ -415,12 +550,21 @@ def main() -> int:
     output_dir = Path(args.output_dir)
     existing_titles = read_existing_titles(publications_dir)
 
-    candidates = [
-        candidate
-        for candidate in discover_openalex(args.since_year, args.per_page)
-        if normalize_title(candidate.title) not in existing_titles
-        and candidate.confidence >= args.min_confidence
-    ]
+    discovered = discover_openalex(args.since_year, args.until_date, args.per_page)
+    discovered.extend(discover_crossref(args.since_year, args.until_date, args.per_page))
+
+    candidates: list[Candidate] = []
+    seen_titles: set[str] = set()
+    for candidate in discovered:
+        key = normalize_title(candidate.title)
+        if (
+            key in existing_titles
+            or key in seen_titles
+            or candidate.confidence < args.min_confidence
+        ):
+            continue
+        seen_titles.add(key)
+        candidates.append(candidate)
     candidates.sort(key=lambda item: (item.date, item.confidence), reverse=True)
 
     clean_output_dir(output_dir)
