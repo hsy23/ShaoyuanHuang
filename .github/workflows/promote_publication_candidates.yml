@@ -1,0 +1,79 @@
+name: Promote Publication Candidates
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_confidence:
+        description: "Minimum confidence required for promotion"
+        required: true
+        default: "8"
+      title_filter:
+        description: "Optional semicolon-separated title fragments. Leave empty to promote all eligible candidates."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Promote eligible candidates
+        env:
+          TITLE_FILTER: ${{ inputs.title_filter }}
+        run: |
+          REPORT_FILE="$RUNNER_TEMP/promote-publication-candidates.md"
+          args=(--min-confidence "${{ inputs.min_confidence }}")
+          if [ -n "$TITLE_FILTER" ]; then
+            args+=(--title-filter "$TITLE_FILTER")
+          fi
+
+          python scripts/promote_publication_candidates.py "${args[@]}" | tee "$REPORT_FILE"
+          {
+            echo "Automated publication promotion moved eligible candidates from \`_publication_candidates/\` into \`_publications/\`."
+            echo
+            cat "$REPORT_FILE"
+          } > "$RUNNER_TEMP/promote-publication-pr-body.md"
+
+      - name: Create or update promotion pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH_NAME: auto/promoted-publications
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No publication candidates were promoted."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$BRANCH_NAME:refs/remotes/origin/$BRANCH_NAME" || true
+          git checkout -B "$BRANCH_NAME"
+          git add _publications _publication_candidates
+          git commit -m "Promote publication candidates"
+          git push --force-with-lease origin "$BRANCH_NAME"
+
+          pr_number="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH_NAME" --state open --json number --jq '.[0].number')"
+          if [ -n "$pr_number" ]; then
+            gh pr edit "$pr_number" \
+              --repo "$GITHUB_REPOSITORY" \
+              --body-file "$RUNNER_TEMP/promote-publication-pr-body.md"
+          else
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --head "$BRANCH_NAME" \
+              --base "${{ github.event.repository.default_branch }}" \
+              --draft \
+              --title "Promote publication candidates" \
+              --body-file "$RUNNER_TEMP/promote-publication-pr-body.md"
+          fi
