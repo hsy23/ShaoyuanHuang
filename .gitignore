@@ -12,6 +12,10 @@ Gemfile.lock
 node_modules
 package-lock.json
 
+# Ignore files created by Python
+__pycache__/
+*.pyc
+
 # Ignore the vendor file and bundle for alternative installation
 vendor/
 .bundle/
