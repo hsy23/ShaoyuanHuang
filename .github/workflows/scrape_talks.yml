@@ -3,7 +3,7 @@ name: Scrape Talk Locations
 on:
   push:
     paths:
-      - 'talks/**'
+      - '_talks/**'
       - 'talkmap.ipynb'
 
 jobs:

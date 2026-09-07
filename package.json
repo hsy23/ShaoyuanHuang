@@ -1,10 +1,10 @@
 {
-  "name": "academic-pages",
+  "name": "shaoyuanhuang-homepage",
   "version": "0.8.1.1",
-  "description": "Academic Pages Mistakes Jekyll theme npm build scripts",
+  "description": "Jekyll assets for Shaoyuan Huang's academic homepage",
   "repository": {
     "type": "git",
-    "url": "https://github.com/academicpages/academicpages.github.io"
+    "url": "https://github.com/hsy23/ShaoyuanHuang"
   },
   "keywords": [
     "jekyll",
@@ -17,9 +17,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/academicpages/academicpages.github.io/issues"
+    "url": "https://github.com/hsy23/ShaoyuanHuang/issues"
   },
-  "homepage": "https://github.com/academicpages/academicpages.github.io",
+  "homepage": "https://hsy23.github.io/ShaoyuanHuang/",
   "engines": {
     "node": ">= 0.10.0"
   },

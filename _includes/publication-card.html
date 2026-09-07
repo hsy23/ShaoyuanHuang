@@ -46,6 +46,8 @@
   {% assign venue_code = post.venue_short %}
 {% elsif post.venue contains "SIGKDD" or post.venue contains "ACM KDD" %}
   {% assign venue_code = "KDD'" | append: year_short %}
+{% elsif post.venue contains "Distributed Computing Systems" or post.venue contains "ICDCS" %}
+  {% assign venue_code = "ICDCS'" | append: year_short %}
 {% elsif post.venue contains "INFOCOM" %}
   {% assign venue_code = "INFOCOM'" | append: year_short %}
 {% elsif post.venue contains "TKDE" or post.venue contains "Knowledge and Data Engineering" %}
@@ -56,6 +58,10 @@
   {% assign venue_code = "TPDS'" | append: year_short %}
 {% elsif post.venue contains "Transactions on Cloud Computing" or post.venue contains "TCC" %}
   {% assign venue_code = "TCC'" | append: year_short %}
+{% elsif post.venue contains "Machine Learning in Communications and Networking" or post.venue contains "TMLCN" %}
+  {% assign venue_code = "TMLCN'" | append: year_short %}
+{% elsif post.venue contains "Cognitive Communications and Networking" or post.venue contains "TCCN" %}
+  {% assign venue_code = "TCCN'" | append: year_short %}
 {% elsif post.venue contains "Journal of Cloud Computing" %}
   {% assign venue_code = "JCC'" | append: year_short %}
 {% elsif post.venue contains "CIKM" %}
@@ -72,7 +78,7 @@
   {% assign venue_code = "MASS'" | append: year_short %}
 {% elsif post.venue contains "Network and Parallel Computing" or post.venue contains "NPC" %}
   {% assign venue_code = "NPC'" | append: year_short %}
-{% elsif post.venue contains "Communications" or post.venue contains "ICC" %}
+{% elsif post.venue contains "International Conference on Communications" or post.venue contains "ICC" %}
   {% assign venue_code = "ICC'" | append: year_short %}
 {% elsif post.venue contains "ECAI" %}
   {% assign venue_code = "ECAI'" | append: year_short %}
@@ -88,10 +94,16 @@
 {% endif %}
 
 {% assign home_url = "" %}
+{% assign local_url = site.baseurl | append: post.url %}
+{% assign primary_url = local_url %}
+{% assign primary_url_external = false %}
 {% if post.homepage and post.homepage != "" %}
   {% assign home_url = post.homepage %}
+  {% assign primary_url = post.homepage %}
+  {% assign primary_url_external = true %}
 {% elsif post.paperurl and post.paperurl != "" %}
-  {% assign home_url = post.paperurl %}
+  {% assign primary_url = post.paperurl %}
+  {% assign primary_url_external = true %}
 {% endif %}
 
 {% capture search_text %}{{ title }} {{ post.venue }} {{ post.citation | strip_html }} {{ area_labels_text }} {{ pub_type_label }} {{ post.date | date: "%Y" }}{% endcapture %}
@@ -110,10 +122,10 @@
       </div>
 
       <h3 class="pub-card__title">
-        {% if home_url != "" %}
-          <a href="{{ home_url }}" target="_blank" rel="noopener">{{ title }}</a>
+        {% if primary_url_external %}
+          <a href="{{ primary_url }}" target="_blank" rel="noopener">{{ title }}</a>
         {% else %}
-          <a href="{{ site.baseurl }}{{ page.url }}">{{ title }}</a>
+          <a href="{{ primary_url }}">{{ title }}</a>
         {% endif %}
       </h3>
     </div>
@@ -131,12 +143,12 @@
     <div class="pub-card__actions">
       {% if home_url != "" %}
         <a class="pub-card__button" href="{{ home_url }}" target="_blank" rel="noopener">Homepage</a>
-      {% else %}
-        <a class="pub-card__button" href="{{ site.baseurl }}{{ page.url }}">Homepage</a>
       {% endif %}
 
       {% if post.paperurl and post.paperurl != "" %}
         <a class="pub-card__button" href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>
+      {% elsif home_url == "" %}
+        <a class="pub-card__button" href="{{ local_url }}">Details</a>
       {% endif %}
 
       {% if post.slidesurl and post.slidesurl != "" %}
