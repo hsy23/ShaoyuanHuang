@@ -5,26 +5,26 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
-description: "Shaoyuan Huang (黄少远) - Ph.D. Candidate in Edge Computing and AI Systems at Tianjin University and King's College London. Research on distributed systems, workload forecasting, and AI inference."
-keywords: "Shaoyuan Huang, 黄少远, Edge Computing, AI, KCL, King's College London, Tianjin University, Computer Science, PhD, Distributed Systems, Workload Forecasting"
+description: "Shaoyuan Huang (黄少远) - Algorithm Engineer and TGT at JD Cloud, JD Technology. Research on LLM serving, SLO-aware scheduling, and resource management."
+keywords: "Shaoyuan Huang, 黄少远, JD Cloud, JD Technology, AI Infrastructure, LLM Serving, SLO-aware Scheduling, Heterogeneous Systems, Resource Management, Tianjin University"
 robots: "index,follow"
 ---
 
-I'm a 4th-year Ph.D. student in the Edge Intelligence Group at Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html). I'm also a visiting Ph.D. student at the Department of Engineering, King's College London (under China Scholarship Council), where I collaborate under the supervision of Professor [Yansha Deng](https://www.yanshadeng.org/).
+I'm an Algorithm Engineer in the AI Infrastructure inference team at JD Cloud, JD Technology, and a member of JD's TGT program. My research focuses on scheduling and resource management for efficient, reliable large language model (LLM) serving.
 
-Before my Ph.D., I received my B.E. and M.E. degrees from Tianjin University, both from the College of Intelligence and Computing. I have also completed two industrial internships at PPIO [(Paiou Cloud)](https://ppio.cn/), where I developed large-scale workload prediction models and integrated intelligent task deployment systems.
+I received my Ph.D. from Tianjin University, advised by Professor [Xiaofei Wang](http://www.drxiaofei.wang/index.html), and visited King's College London under Professor [Yansha Deng](https://www.yanshadeng.org/), supported by the China Scholarship Council. I also received my B.E. and M.E. degrees from Tianjin University. My earlier research and internships at [PPIO (Paiou Cloud)](https://ppio.cn/) explored workload forecasting and resource provisioning for cloud and edge systems.
 
-I'm passionate about exploring the intersection of ML and systems, with a focus on building intelligent, high-performance cloud and edge infrastructures that deliver both high throughput and SLO compliance in dynamic multi-tenant environments. My current research centers on **LLM-adaptive Workload Forecasting** and **Unified Frameworks for LLM Inference and Fine-tuning** across distributed platforms.
+My current research centers on **Priority- and SLO-aware LLM Inference Scheduling** and **Heterogeneous Resource Allocation**, including routing–scheduling coordination, cost-aware runtime adaptation, and workflow-aware scheduling for agentic applications. I aim to develop principled methods that balance latency, throughput, fairness, and resource efficiency under dynamic workloads and diverse service requirements.
 
 <div style="display: flex; flex-wrap: wrap; margin-top: 2em;">
   <!-- 左侧 Interests 部分 -->
   <div style="flex: 1; min-width: 300px; padding-right: 20px;">
     <h1 class="black-title">Interests</h1>
     <ul>
-      <li>Distributed System Workload Forecasting</li>
-      <li>Resource Provisioning</li>
-      <li>AI Inference Serving Systems</li>
-      <li>LLM Workload Characterization and Performance Modeling</li>
+      <li>Priority- and SLO-aware LLM Inference Scheduling</li>
+      <li>Heterogeneous Resource Allocation and Runtime Adaptation</li>
+      <li>Workflow-aware Scheduling for Agentic Applications</li>
+      <li>Workload Forecasting and Performance Modeling</li>
     </ul>
   </div>
   
@@ -49,7 +49,7 @@ I'm passionate about exploring the intersection of ML and systems, with a focus 
         <img src="{{ site.baseurl }}/images/logos/tju-logo.png" alt="TJU Logo" style="width: 100%;">
       </div>
       <div>
-        <p style="margin: 0; font-weight: bold;">Ph.D. in Computer Science, 2022 - Present</p>
+        <p style="margin: 0; font-weight: bold;">Ph.D. in Computer Science, 2022 - 2026</p>
         <p style="margin: 0;">Tianjin University | Advisor: Prof. <a href="http://www.drxiaofei.wang/index.html">Xiaofei Wang</a></p>
       </div>
     </div>
